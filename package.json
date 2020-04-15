@@ -1,0 +1,72 @@
+{
+  "name": "nextbasic",
+  "displayName": "NextBASIC",
+  "description": "NextBASIC",
+  "version": "0.0.1",
+  "prettier": {
+    "singleQuote": false
+  },
+  "engines": {
+    "vscode": "^1.44.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "activationEvents": [
+    "onCommand:nextbasic.helloWorld",
+    "onLanguage:nextbasic"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "nextbasic",
+        "aliases": [
+          "NextBASIC",
+          "BASIC",
+          "ZX BASIC"
+        ],
+        "extensions": [
+          ".bas"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "nextbasic",
+        "scopeName": "source.nextbasic",
+        "path": "./syntaxes/bas.tmLanguage.json"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "nextbasic.new-line-with-number",
+        "key": "alt+enter",
+        "when": "editorLangId == nextbasic"
+      }
+    ],
+    "commands": [
+      {
+        "title": "New line with number",
+        "command": "nextbasic.new-line-with-number"
+      }
+    ]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "node ./test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.44.0",
+    "@types/glob": "^7.1.1",
+    "@types/mocha": "^7.0.2",
+    "@types/node": "^13.11.0",
+    "eslint": "^6.8.0",
+    "glob": "^7.1.6",
+    "mocha": "^7.1.1",
+    "typescript": "^3.8.3",
+    "vscode-test": "^1.3.0"
+  }
+}
