@@ -3,7 +3,7 @@
   "displayName": "NextBASIC",
   "description": "NextBASIC",
   "publisher": "remysharp",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "prettier": {
     "singleQuote": false
   },
@@ -19,6 +19,11 @@
   ],
   "main": "./extension.js",
   "contributes": {
+    "configurationDefaults": {
+      "[nextbasic]": {
+        "editor.formatOnType": true
+      }
+    },
     "languages": [
       {
         "id": "nextbasic",
@@ -73,7 +78,9 @@
   "directories": {
     "test": "test"
   },
-  "dependencies": {},
+  "dependencies": {
+    "txt2bas": "0.0.6"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/remy/vscode-nextbasic.git"
