@@ -5,7 +5,7 @@
   "publisher": "remysharp",
   "version": "0.0.2",
   "prettier": {
-    "singleQuote": false
+    "singleQuote": true
   },
   "engines": {
     "vscode": "^1.44.0"
@@ -17,8 +17,22 @@
     "onCommand:nextbasic.helloWorld",
     "onLanguage:nextbasic"
   ],
-  "main": "./extension.js",
+  "main": "./extension",
   "contributes": {
+    "configuration": {
+      "title": "NextBASIC",
+      "properties": {
+        "nextbasic.commentWith": {
+          "type": "enum",
+          "default": "REM",
+          "enum": [
+            "REM",
+            ";"
+          ],
+          "description": "Either use `REM` or `;` for toggling comments"
+        }
+      }
+    },
     "configurationDefaults": {
       "[nextbasic]": {
         "editor.formatOnType": true
@@ -56,13 +70,16 @@
       {
         "title": "New line with number",
         "command": "nextbasic.new-line-with-number"
+      },
+      {
+        "title": "Convert binary .bas to text",
+        "command": "nextbasic.import-basic"
       }
     ]
   },
   "scripts": {
     "lint": "eslint .",
-    "pretest": "npm run lint",
-    "test": "node ./test/runTest.js"
+    "pretest": "npm run lint"
   },
   "devDependencies": {
     "@types/vscode": "^1.44.0",
@@ -79,15 +96,15 @@
     "test": "test"
   },
   "dependencies": {
-    "txt2bas": "0.0.6"
+    "txt2bas": "0.0.7"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/remy/vscode-nextbasic.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Remy Sharp",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/remy/vscode-nextbasic/issues"
   },
