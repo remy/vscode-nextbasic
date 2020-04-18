@@ -1,0 +1,8 @@
+#program autoexec
+#autostart
+5 PRINT "Converting..."
+10 .txt2bas "C:/devel/index.txt" "C:/devel/index.bas"
+20 .cd devel
+25 CLS
+30 ON ERROR PRINT "Error": ERROR TO e,l,s,b: INK 7: PAPER 0: PRINT "code ";e;" at ";l;":";statement: ON ERROR: STOP
+40 LOAD "index.bas": RUN

@@ -2,6 +2,15 @@
 
 All notable changes to the "nextbasic" extension will be documented in this file.
 
+## [0.0.6] - 2020-04-17
+
+- Fix comment shortcut taking over 😱 (again, sorry)
+- Add cpsect launch support 🎉 (MacOS only at present, sorry…again)
+
+## [0.0.5] - 2020-04-17
+
+- Fix comment shortcut taking over 😱
+
 ## [0.0.3] - 2020-04-16
 
 - On new line, the syntax is correctly capitalised (parsed into binary .bas and out to text)

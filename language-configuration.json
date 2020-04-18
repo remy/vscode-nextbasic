@@ -7,7 +7,7 @@
   "folding": {
     "markers": {
       "start": "\\bDEFPROC\\b",
-      "end": "\\bENDPROC\\b"
+      "end": "\\d\\s+ENDPROC\\b"
     }
   },
 

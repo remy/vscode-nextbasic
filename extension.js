@@ -7,10 +7,9 @@ const toggleCommentsCommand = require('./lib/toggle-comments.command');
 const formatOnType = require('./lib/format-on-type.provider');
 const definitions = require('./lib/definition.provider');
 const hoverHelp = require('./lib/help.hover');
+const runInCspect = require('./lib/auto-run.task');
 
-// this method is called when your extension is activated
-// your extension is activated the very first time the command is executed
-
+let taskProvider = undefined;
 /**
  * @param {vscode.ExtensionContext} context
  */
@@ -24,11 +23,16 @@ function activate(context) {
   context.subscriptions.push(formatOnType());
   context.subscriptions.push(definitions());
   context.subscriptions.push(hoverHelp());
+  context.subscriptions.push(runInCspect(context.extensionPath));
 }
 exports.activate = activate;
 
 // this method is called when your extension is deactivated
-function deactivate() {}
+function deactivate() {
+  if (taskProvider) {
+    taskProvider.dispose();
+  }
+}
 
 module.exports = {
   activate,

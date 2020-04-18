@@ -3,7 +3,7 @@
   "displayName": "NextBASIC",
   "description": "NextBASIC",
   "publisher": "remysharp",
-  "version": "0.0.2",
+  "version": "0.0.6",
   "prettier": {
     "singleQuote": true
   },
@@ -14,16 +14,62 @@
     "Programming Languages"
   ],
   "activationEvents": [
-    "onCommand:nextbasic.helloWorld",
     "onLanguage:nextbasic"
   ],
   "main": "./extension",
   "contributes": {
+    "__taskDefinitions": [
+      {
+        "type": "cspect",
+        "required": [
+          "imgPath",
+          "cspect"
+        ],
+        "properties": {
+          "file": {
+            "type": "string",
+            "description": "The BASIC file that provides the source. Can be omitted."
+          },
+          "cspect": {
+            "type": "string",
+            "description": "The path to the cspect executable."
+          },
+          "hdfmonkey": {
+            "type": "string",
+            "description": "The path to the hdfmonkey executable, otherwise assumed to be in your $PATH."
+          },
+          "imgPath": {
+            "type": "string",
+            "description": "The path to the Spectrum Next .img file."
+          }
+        }
+      }
+    ],
     "configuration": {
       "title": "NextBASIC",
       "properties": {
+        "nextbasic.cspect": {
+          "type": "string",
+          "default": "",
+          "description": "Points the path to cspect executable"
+        },
+        "nextbasic.cspectOptions": {
+          "type": "string",
+          "default": "-w5 -vsync -s28 -60 -tv -basickeys -zxnext -nextrom",
+          "description": "cspect arguments"
+        },
+        "nextbasic.nextImagePath": {
+          "type": "string",
+          "default": "",
+          "description": "Points the .img file for Spectrum Next used by cspect"
+        },
+        "nextbasic.hdfmonkeyPath": {
+          "type": "string",
+          "default": "hdfmonkey",
+          "description": "Points the hdfmonkey binary, defaults to searching your $PATH"
+        },
         "nextbasic.commentWith": {
-          "type": "enum",
+          "type": "string",
           "default": "REM",
           "enum": [
             "REM",
@@ -47,7 +93,8 @@
           "ZX BASIC"
         ],
         "extensions": [
-          ".bas"
+          ".bas",
+          ".bas.txt"
         ],
         "configuration": "./language-configuration.json"
       }
@@ -68,12 +115,20 @@
     ],
     "commands": [
       {
-        "title": "New line with number",
+        "title": "NextBASIC: Run with cspect",
+        "command": "nextbasic.run"
+      },
+      {
+        "title": "NextBASIC: New line with number",
         "command": "nextbasic.new-line-with-number"
       },
       {
-        "title": "Convert binary .bas to text",
+        "title": "NextBASIC: import binary .bas to text",
         "command": "nextbasic.import-basic"
+      },
+      {
+        "title": "NextBASIC: Comment",
+        "command": "editor.action.commentLine.nextbasic"
       }
     ]
   },
@@ -96,7 +151,7 @@
     "test": "test"
   },
   "dependencies": {
-    "txt2bas": "0.0.7"
+    "txt2bas": "^1.1.0"
   },
   "repository": {
     "type": "git",
