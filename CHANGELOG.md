@@ -2,6 +2,17 @@
 
 All notable changes to the "nextbasic" extension will be documented in this file.
 
+## [0.0.8] - 2020-04-20
+
+- Windows support 🎉
+- Allow "Run with cspect" to work on non-workspace directories
+- Bump txt2bas to fix comment crunching
+
+## [0.0.7] - 2020-04-19
+
+- Pause after run to allow for fast exit of user code (testing)
+- Bump [txt2bas](https://github.com/remy/txt2bas) dependency to 1.2.2
+
 ## [0.0.6] - 2020-04-17
 
 - Fix comment shortcut taking over 😱 (again, sorry)

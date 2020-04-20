@@ -3,7 +3,7 @@
   "displayName": "NextBASIC",
   "description": "NextBASIC",
   "publisher": "remysharp",
-  "version": "0.0.6",
+  "version": "0.0.8",
   "prettier": {
     "singleQuote": true
   },
@@ -151,7 +151,7 @@
     "test": "test"
   },
   "dependencies": {
-    "txt2bas": "^1.1.0"
+    "txt2bas": "^1.2.3"
   },
   "repository": {
     "type": "git",
