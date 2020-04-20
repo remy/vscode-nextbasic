@@ -1,7 +1,7 @@
 {
   "comments": {
     // we actually use code to intercept this and comment properly
-    "lineComment": "REM "
+    // "lineComment": "REM "
   },
 
   "folding": {

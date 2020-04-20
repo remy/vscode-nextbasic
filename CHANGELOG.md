@@ -6,6 +6,7 @@ All notable changes to the "nextbasic" extension will be documented in this file
 
 - Fix comments: cmd-/ (mac) or ctrl-/ (non-mac)
 - Surface any errors in cspect booting
+- Fix format on newline with number (alt+enter)
 
 ## [0.0.8] - 2020-04-20
 
