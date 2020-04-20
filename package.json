@@ -3,7 +3,7 @@
   "displayName": "NextBASIC",
   "description": "NextBASIC",
   "publisher": "remysharp",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "prettier": {
     "singleQuote": true
   },
@@ -111,6 +111,16 @@
         "command": "nextbasic.new-line-with-number",
         "key": "alt+enter",
         "when": "editorLangId == nextbasic"
+      },
+      {
+        "command": "nextbasic.commentLine",
+        "key": "cmd+/",
+        "when": "isMac && editorLangId == nextbasic"
+      },
+      {
+        "command": "nextbasic.commentLine",
+        "key": "ctrl+/",
+        "when": "!isMac && editorLangId == nextbasic"
       }
     ],
     "commands": [
@@ -128,7 +138,7 @@
       },
       {
         "title": "NextBASIC: Comment",
-        "command": "editor.action.commentLine.nextbasic"
+        "command": "nextbasic.commentLine"
       }
     ]
   },
@@ -151,7 +161,7 @@
     "test": "test"
   },
   "dependencies": {
-    "txt2bas": "^1.2.3"
+    "txt2bas": "^1.2.4"
   },
   "repository": {
     "type": "git",
