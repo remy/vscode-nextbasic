@@ -170,6 +170,7 @@
   "keywords": [],
   "author": "Remy Sharp",
   "license": "MIT",
+  "icon": "icon.png",
   "bugs": {
     "url": "https://github.com/remy/vscode-nextbasic/issues"
   },
