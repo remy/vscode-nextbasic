@@ -2,6 +2,11 @@
 
 All notable changes to the "nextbasic" extension will be documented in this file.
 
+## [0.0.10] - 2020-04-21
+
+- More specific error reporting
+- Fixing paths when on Windows
+
 ## [0.0.9] - 2020-04-20
 
 - Fix comments: cmd-/ (mac) or ctrl-/ (non-mac)
