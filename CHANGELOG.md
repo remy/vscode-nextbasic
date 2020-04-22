@@ -2,6 +2,10 @@
 
 All notable changes to the "nextbasic" extension will be documented in this file.
 
+## [0.0.11] - 2020-04-22
+
+- Warning notice for cygwin based hdfmonkey (tip: use [this](http://uto.speccy.org/downloads/hdfmonkey_windows.zip))
+
 ## [0.0.10] - 2020-04-21
 
 - More specific error reporting

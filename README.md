@@ -19,7 +19,9 @@ Prerequisites:
 - Install [hdfmonkey](https://github.com/gasman/hdfmonkey) (ideally stored in `$PATH`) ([Windows version here](http://uto.speccy.org/downloads/hdfmonkey_windows.zip))
 - (MacOS only) Install [mono](https://formulae.brew.sh/formula/mono) via `brew install mono`
 
-Update `nextbasic` configuration in VS Code, which requires the location of cspect.exe (yes, on a Mac) and the Next img file.
+**Important Windows users** ensure you use the hdfmonkey build from uto.speccy.org (link above) - it's built _without_ cygwin as a dependency.
+
+Update `nextbasic` configuration in VS Code, which requires the location of cspect.exe (yes, even on a Mac) and the Next img file.
 
 Video explanation coming soon.
 
