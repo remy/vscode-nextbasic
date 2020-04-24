@@ -61,6 +61,14 @@
           "end": "(?<=\\d)\\s"
         },
         {
+          "name": "entity.name.directive.nextbasic",
+          "match": "^(#\\s*(?:autostart|program)\\s+(?:.*))$"
+        },
+        {
+          "name": "comment.line.nextbasic",
+          "match": "^(#(?:.*))$"
+        },
+        {
           "name": "constant.numeric.nextbasic",
           "match": "-?\\b((([0-9]+\\.?[0-9]*)|(\\.[0-9]+))((e|E)(\\+|-)?[0-9]+)?)|(\\$[a-zA-Z0-9]+)|(@[0|1]+)\\b"
         },

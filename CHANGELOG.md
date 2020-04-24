@@ -2,6 +2,11 @@
 
 All notable changes to the "nextbasic" extension will be documented in this file.
 
+## [0.0.12] - 2020-04-24
+
+- Add symbol lookup support - to jump to `DEFPROC` and `DEF FN`
+- Update txt2bas to support blank lines and `#` leading lines
+
 ## [0.0.11] - 2020-04-22
 
 - Warning notice for cygwin based hdfmonkey (tip: use [this](http://uto.speccy.org/downloads/hdfmonkey_windows.zip))

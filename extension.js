@@ -6,6 +6,7 @@ const importBasicCommand = require('./lib/import-basic.command');
 const toggleCommentsCommand = require('./lib/toggle-comments.command');
 const formatOnType = require('./lib/format-on-type.provider');
 const definitions = require('./lib/definition.provider');
+const symbols = require('./lib/symbols.provider');
 const hoverHelp = require('./lib/help.hover');
 const runInCspect = require('./lib/auto-run.task');
 
@@ -22,6 +23,7 @@ function activate(context) {
   context.subscriptions.push(toggleCommentsCommand());
   context.subscriptions.push(formatOnType());
   context.subscriptions.push(definitions());
+  context.subscriptions.push(symbols());
   context.subscriptions.push(hoverHelp());
   context.subscriptions.push(runInCspect(context.extensionPath));
 }
