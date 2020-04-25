@@ -3,7 +3,7 @@
   "displayName": "NextBASIC",
   "description": "NextBASIC",
   "publisher": "remysharp",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "prettier": {
     "singleQuote": true
   },
@@ -129,6 +129,10 @@
         "command": "nextbasic.run"
       },
       {
+        "title": "NextBASIC: export to binary .bas",
+        "command": "nextbasic.export"
+      },
+      {
         "title": "NextBASIC: New line with number",
         "command": "nextbasic.new-line-with-number"
       },
@@ -161,7 +165,7 @@
     "test": "test"
   },
   "dependencies": {
-    "txt2bas": "^1.3.0"
+    "txt2bas": "^1.3.1"
   },
   "repository": {
     "type": "git",

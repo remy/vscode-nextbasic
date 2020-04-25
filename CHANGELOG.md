@@ -2,6 +2,13 @@
 
 All notable changes to the "nextbasic" extension will be documented in this file.
 
+## [0.0.13] - 2020-04-25
+
+- Add export to NextBASIC file
+- Add missing syntax highlighting (including: `OPEN`, `REG`, `DPEEK`, `DPOKE` and others)
+- Highlight stream/channel numbers
+- Update txt2bas to fix weird corruption of characters
+
 ## [0.0.12] - 2020-04-24
 
 - Add symbol lookup support - to jump to `DEFPROC` and `DEF FN`

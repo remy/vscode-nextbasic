@@ -4,8 +4,10 @@ ZX Spectrum NextBASIC syntax highlighting for Visual Studio Code.
 
 ## Features
 
+- Import and export binary NextBASIC files
 - Full NextBASIC syntax, including new `;` comment support
 - Jump to definition for `GO TO` and `PROC` statements
+- Symbol lookup (for `DEFPROC` and `DEF FN`)
 - ctrl/cmd+enter will insert a new line with line number pre-populated
 - Format on edit
 - Collapse DEFPROC
@@ -34,4 +36,3 @@ Credit to Rob Uttley for solving the autoexec and `#autostart`.
 Credit to @kounch for their superb original work on [vscode_zx](https://github.com/kounch/vscode_zx) (cspect, ZEsarUX and zxbasic - BASIC to asm support)
 
 Original syntax based specifically on the work by [jsanjose](https://github.com/jsanjose/zxbasic-vscode) - and modified to specifically support NextBASIC.
-
