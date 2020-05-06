@@ -2,6 +2,10 @@
 
 All notable changes to the "nextbasic" extension will be documented in this file.
 
+## [1.0.1] - 2020-05-06
+
+- Emergency patch - validation clearly needed some work!
+
 ## [1.0.0] - 2020-05-06
 
 - Add inline validation

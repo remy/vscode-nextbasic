@@ -29,7 +29,7 @@ function activate(context) {
   context.subscriptions.push(symbols());
   context.subscriptions.push(hoverHelp());
   context.subscriptions.push(runInCspect(context.extensionPath));
-  context.subscriptions.push(validationDiagnostic());
+  // context.subscriptions.push(validationDiagnostic());
 }
 exports.activate = activate;
 
