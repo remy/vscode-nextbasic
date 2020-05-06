@@ -10,6 +10,7 @@ const definitions = require('./lib/definition.provider');
 const symbols = require('./lib/symbols.provider');
 const hoverHelp = require('./lib/help.hover');
 const runInCspect = require('./lib/auto-run.task');
+const validationDiagnostic = require('./lib/validation.diagnostic');
 
 let taskProvider = undefined;
 /**
@@ -28,6 +29,7 @@ function activate(context) {
   context.subscriptions.push(symbols());
   context.subscriptions.push(hoverHelp());
   context.subscriptions.push(runInCspect(context.extensionPath));
+  context.subscriptions.push(validationDiagnostic());
 }
 exports.activate = activate;
 

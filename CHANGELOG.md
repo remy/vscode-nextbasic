@@ -2,6 +2,15 @@
 
 All notable changes to the "nextbasic" extension will be documented in this file.
 
+## [1.0.0] - 2020-05-06
+
+- Add inline validation
+- Upgrade to latest txt2bas (new parsing engine)
+- Fix ensure user code is last to be sent to Cspect (avoid conflicts with cwd)
+- Shutdown previously spawned Cspect instances
+- Show NextBASIC errors on compile and launch Cspect
+- Bump to stable release
+
 ## [0.0.13] - 2020-04-25
 
 - Add export to NextBASIC file
