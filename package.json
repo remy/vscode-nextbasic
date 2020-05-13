@@ -3,7 +3,7 @@
   "displayName": "NextBASIC",
   "description": "NextBASIC",
   "publisher": "remysharp",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "prettier": {
     "singleQuote": true
   },
@@ -55,6 +55,11 @@
           "type": "boolean",
           "default": true,
           "description": "Perform custom inline NextBASIC validation"
+        },
+        "nextbasic.newLineOnEnter": {
+          "type": "boolean",
+          "default": true,
+          "description": "On [enter] add new line number and format current line"
         }
       }
     },
@@ -88,7 +93,7 @@
     "keybindings": [
       {
         "command": "nextbasic.new-line-with-number",
-        "key": "alt+enter",
+        "key": "enter",
         "when": "editorLangId == nextbasic"
       },
       {
@@ -104,6 +109,11 @@
       {
         "command": "nextbasic.indentLines",
         "key": "cmd+]",
+        "when": "editorFocus && !editorReadonly && isMac && editorLangId == nextbasic"
+      },
+      {
+        "command": "nextbasic.unindentLines",
+        "key": "cmd+[",
         "when": "editorFocus && !editorReadonly && isMac && editorLangId == nextbasic"
       },
       {
@@ -152,7 +162,7 @@
     "@types/glob": "^7.1.1",
     "@types/mocha": "^7.0.2",
     "@types/node": "^13.13.5",
-    "@types/vscode": "^1.45.0",
+    "@types/vscode": "^1.44.0",
     "eslint": "^6.8.0",
     "glob": "^7.1.6",
     "mocha": "^7.1.2",
@@ -164,7 +174,7 @@
   },
   "dependencies": {
     "lodash.debounce": "^4.0.8",
-    "txt2bas": "^1.7.3"
+    "txt2bas": "^1.7.4"
   },
   "repository": {
     "type": "git",

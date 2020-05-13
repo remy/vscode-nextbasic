@@ -2,6 +2,12 @@
 
 All notable changes to the "nextbasic" extension will be documented in this file.
 
+## [1.1.1] - 2020-05-13
+
+- Fix - forgot to package txt2bas!
+- Fix back-indent on Mac
+- Add new line number and format upon enter (controllable through settings)
+
 ## [1.1.0] - 2020-05-13
 
 - Fix and restore validation (but inline only)
