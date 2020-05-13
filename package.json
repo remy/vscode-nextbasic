@@ -3,7 +3,7 @@
   "displayName": "NextBASIC",
   "description": "NextBASIC",
   "publisher": "remysharp",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "prettier": {
     "singleQuote": true
   },
@@ -11,40 +11,14 @@
     "vscode": "^1.44.0"
   },
   "categories": [
-    "Programming Languages"
+    "Programming Languages",
+    "Formatters"
   ],
   "activationEvents": [
     "onLanguage:nextbasic"
   ],
   "main": "./extension",
   "contributes": {
-    "__taskDefinitions": [
-      {
-        "type": "cspect",
-        "required": [
-          "imgPath",
-          "cspect"
-        ],
-        "properties": {
-          "file": {
-            "type": "string",
-            "description": "The BASIC file that provides the source. Can be omitted."
-          },
-          "cspect": {
-            "type": "string",
-            "description": "The path to the cspect executable."
-          },
-          "hdfmonkey": {
-            "type": "string",
-            "description": "The path to the hdfmonkey executable, otherwise assumed to be in your $PATH."
-          },
-          "imgPath": {
-            "type": "string",
-            "description": "The path to the Spectrum Next .img file."
-          }
-        }
-      }
-    ],
     "configuration": {
       "title": "NextBASIC",
       "properties": {
@@ -76,6 +50,11 @@
             ";"
           ],
           "description": "Either use `REM` or `;` for toggling comments"
+        },
+        "nextbasic.validate": {
+          "type": "boolean",
+          "default": true,
+          "description": "Perform custom inline NextBASIC validation"
         }
       }
     },
@@ -121,12 +100,31 @@
         "command": "nextbasic.commentLine",
         "key": "ctrl+/",
         "when": "!isMac && editorLangId == nextbasic"
+      },
+      {
+        "command": "nextbasic.indentLines",
+        "key": "cmd+]",
+        "when": "editorFocus && !editorReadonly && isMac && editorLangId == nextbasic"
+      },
+      {
+        "command": "nextbasic.indentLines",
+        "key": "ctrl+]",
+        "when": "!isMac && editorFocus && !editorReadonly && isMac && editorLangId == nextbasic"
+      },
+      {
+        "command": "nextbasic.unindentLines",
+        "key": "ctrl+[",
+        "when": "!isMac && editorFocus && !editorReadonly && isMac && editorLangId == nextbasic"
       }
     ],
     "commands": [
       {
         "title": "NextBASIC: Run with cspect",
         "command": "nextbasic.run"
+      },
+      {
+        "title": "NextBASIC: validate code",
+        "command": "nextbasic.validate"
       },
       {
         "title": "NextBASIC: export to binary .bas",
@@ -151,13 +149,13 @@
     "pretest": "npm run lint"
   },
   "devDependencies": {
-    "@types/vscode": "^1.44.0",
     "@types/glob": "^7.1.1",
     "@types/mocha": "^7.0.2",
-    "@types/node": "^13.11.0",
+    "@types/node": "^13.13.5",
+    "@types/vscode": "^1.45.0",
     "eslint": "^6.8.0",
     "glob": "^7.1.6",
-    "mocha": "^7.1.1",
+    "mocha": "^7.1.2",
     "typescript": "^3.8.3",
     "vscode-test": "^1.3.0"
   },
@@ -166,7 +164,7 @@
   },
   "dependencies": {
     "lodash.debounce": "^4.0.8",
-    "txt2bas": "^1.6.5"
+    "txt2bas": "^1.7.3"
   },
   "repository": {
     "type": "git",

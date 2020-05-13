@@ -2,6 +2,14 @@
 
 All notable changes to the "nextbasic" extension will be documented in this file.
 
+## [1.1.0] - 2020-05-13
+
+- Fix and restore validation (but inline only)
+- Fix windows export to bas (fixes #1)
+- Add format document support
+- Add indentation keyboard support
+- txt2bas@1.7.4
+
 ## [1.0.1] - 2020-05-06
 
 - Emergency patch - validation clearly needed some work!
