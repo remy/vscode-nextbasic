@@ -2,6 +2,11 @@
 
 All notable changes to the "nextbasic" extension will be documented in this file.
 
+## [1.2.1] - 2020-05-17
+
+- Fix new line on last line (first time it was adding 2 lines)
+- Update readme
+
 ## [1.2.0] - 2020-05-17
 
 - Add line renumbering
