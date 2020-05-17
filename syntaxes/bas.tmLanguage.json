@@ -37,6 +37,10 @@
           "match": "(?<=:)(?i:(\\s*;).*)"
         },
         {
+          "name": "comment.line.nextbasic",
+          "match": "^(;.*)$"
+        },
+        {
           "name": "variable.other.nextbasic",
           "match": "%[A-Za-z]\\b"
         },
