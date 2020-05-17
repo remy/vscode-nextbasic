@@ -3,7 +3,7 @@
   "displayName": "NextBASIC",
   "description": "NextBASIC",
   "publisher": "remysharp",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "prettier": {
     "singleQuote": true
   },
@@ -133,6 +133,10 @@
         "command": "nextbasic.run"
       },
       {
+        "title": "NextBASIC: renumber",
+        "command": "nextbasic.renumber"
+      },
+      {
         "title": "NextBASIC: validate code",
         "command": "nextbasic.validate"
       },
@@ -174,7 +178,7 @@
   },
   "dependencies": {
     "lodash.debounce": "^4.0.8",
-    "txt2bas": "^1.7.4"
+    "txt2bas": "^1.8.1"
   },
   "repository": {
     "type": "git",

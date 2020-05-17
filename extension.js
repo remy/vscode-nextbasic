@@ -13,6 +13,8 @@ const symbols = require('./lib/symbols.provider');
 const hoverHelp = require('./lib/help.hover');
 const runInCspect = require('./lib/auto-run.task');
 const validationDiagnostic = require('./lib/validation.diagnostic');
+const shift = require('./lib/shift.command');
+const renumber = require('./lib/renumber.command');
 
 /**
  * @param {vscode.ExtensionContext} context
@@ -29,6 +31,8 @@ function activate(context) {
   context.subscriptions.push(definitions());
   context.subscriptions.push(...formatter());
   context.subscriptions.push(...indent());
+  context.subscriptions.push(...shift());
+  context.subscriptions.push(renumber());
   context.subscriptions.push(symbols());
   context.subscriptions.push(hoverHelp());
   context.subscriptions.push(runInCspect(context.extensionPath));

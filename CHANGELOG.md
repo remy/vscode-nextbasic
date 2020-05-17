@@ -2,6 +2,12 @@
 
 All notable changes to the "nextbasic" extension will be documented in this file.
 
+## [1.2.0] - 2020-05-17
+
+- Add line renumbering
+- Add support for editor.action.moveLinesUpAction/editor.action.moveLinesDownAction with line number updates
+- Fix push active working directory into cspect (not root workspace), and ignore hidden files
+
 ## [1.1.1] - 2020-05-13
 
 - Fix - forgot to package txt2bas!
