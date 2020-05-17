@@ -8,6 +8,7 @@ ZX Spectrum NextBASIC syntax highlighting for Visual Studio Code.
 - Full NextBASIC syntax, including new `;` comment support
 - Jump to definition for `GO TO` and `PROC` statements
 - Symbol lookup (for `DEFPROC` and `DEF FN`)
+- Renumbering for whole doc, selected lines or line swap
 - Simple syntax validator
 - Indentation support
 - ctrl/cmd+enter will insert a new line with line number pre-populated
