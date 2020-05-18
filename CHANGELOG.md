@@ -2,6 +2,14 @@
 
 All notable changes to the "nextbasic" extension will be documented in this file.
 
+## [1.3.2] - 2020-05-18
+
+- Fix format leading whitespace (via txt2bas update)
+
+## [1.3.1] - 2020-05-17
+
+- Fix format document
+
 ## [1.3.0] - 2020-05-17
 
 - Add autoline support
