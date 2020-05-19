@@ -2,6 +2,11 @@
 
 All notable changes to the "nextbasic" extension will be documented in this file.
 
+## [1.3.3] - 2020-05-19
+
+- Fix use #program as default filename on export
+- Fix better #autoline support (indent, line shift, new line)
+
 ## [1.3.2] - 2020-05-18
 
 - Fix format leading whitespace (via txt2bas update)
