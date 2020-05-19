@@ -29,16 +29,16 @@
           "match": "(?i:\\b(CHR\\$|INKEY\\$|SCREEN\\$|VAL\\$|STR\\$|PEEK\\$))"
         },
         {
-          "name": "comment.line.nextbasic",
+          "name": "comment.line.remark.nextbasic",
           "match": "(?i:(\\bREM\\b).*)"
         },
         {
-          "name": "comment.line.nextbasic",
+          "name": "comment.line.semicolon.nextbasic",
           "match": "(?<=:)(?i:(\\s*;).*)"
         },
         {
           "name": "comment.line.nextbasic",
-          "match": "^(;.*)$"
+          "match": "^(\\s*;.*)$"
         },
         {
           "name": "variable.other.nextbasic",
@@ -66,10 +66,10 @@
         },
         {
           "name": "entity.name.directive.nextbasic",
-          "match": "^(#\\s*(?:autostart|program)\\s+(?:.*))$"
+          "match": "^(#\\s*(?:autostart|autoline|program)\\s+(?:.*))$"
         },
         {
-          "name": "comment.line.nextbasic",
+          "name": "comment.line.directive.nextbasic",
           "match": "^(#(?:.*))$"
         },
         {

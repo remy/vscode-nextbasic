@@ -105,26 +105,6 @@
         "command": "nextbasic.commentLine",
         "key": "ctrl+/",
         "when": "!isMac && editorLangId == nextbasic"
-      },
-      {
-        "command": "nextbasic.indentLines",
-        "key": "cmd+]",
-        "when": "editorFocus && !editorReadonly && isMac && editorLangId == nextbasic"
-      },
-      {
-        "command": "nextbasic.unindentLines",
-        "key": "cmd+[",
-        "when": "editorFocus && !editorReadonly && isMac && editorLangId == nextbasic"
-      },
-      {
-        "command": "nextbasic.indentLines",
-        "key": "ctrl+]",
-        "when": "!isMac && editorFocus && !editorReadonly && isMac && editorLangId == nextbasic"
-      },
-      {
-        "command": "nextbasic.unindentLines",
-        "key": "ctrl+[",
-        "when": "!isMac && editorFocus && !editorReadonly && isMac && editorLangId == nextbasic"
       }
     ],
     "commands": [

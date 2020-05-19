@@ -30,8 +30,8 @@ function activate(context) {
   context.subscriptions.push(formatOnType());
   context.subscriptions.push(definitions());
   context.subscriptions.push(...formatter());
-  context.subscriptions.push(...indent());
-  context.subscriptions.push(...shift());
+  indent(); // hooks and unhooks
+  shift();
   context.subscriptions.push(renumber());
   context.subscriptions.push(symbols());
   context.subscriptions.push(hoverHelp());
