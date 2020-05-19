@@ -2,6 +2,10 @@
 
 All notable changes to the "nextbasic" extension will be documented in this file.
 
+## [1.3.4] - 2020-05-19
+
+- Fix single line shift renumbering
+
 ## [1.3.3] - 2020-05-19
 
 - Fix use #program as default filename on export
