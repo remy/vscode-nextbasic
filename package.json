@@ -94,7 +94,7 @@
       {
         "command": "nextbasic.new-line-with-number",
         "key": "enter",
-        "when": "editorLangId == nextbasic"
+        "when": "editorTextFocus && editorLangId == nextbasic"
       },
       {
         "command": "nextbasic.commentLine",
