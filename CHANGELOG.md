@@ -2,6 +2,12 @@
 
 All notable changes to the "nextbasic" extension will be documented in this file.
 
+## [1.3.5] - 2020-05-25
+
+- Minor bug fixes:
+  - new line at start of line inserts blank correctly
+  - enter only applies when editor is focused (and not when searching)
+
 ## [1.3.4] - 2020-05-19
 
 - Fix single line shift renumbering
