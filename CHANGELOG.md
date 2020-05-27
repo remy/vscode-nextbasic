@@ -2,6 +2,10 @@
 
 All notable changes to the "nextbasic" extension will be documented in this file.
 
+## [1.3.6] - 2020-05-27
+
+- Bump for txt2bas@1.10.0 - fixes channel number parsing, adds better validation and fixes some int expression parsing.
+
 ## [1.3.5] - 2020-05-25
 
 - Minor bug fixes:
