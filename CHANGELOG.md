@@ -2,6 +2,18 @@
 
 All notable changes to the "nextbasic" extension will be documented in this file.
 
+## [1.3.9] - 2020-05-28
+
+- Fix missing first line on windows
+
+## [1.3.8] - 2020-05-28
+
+- Fix GAAHH txt2bas@1.10.1 - bad parsing in autostart
+
+## [1.3.7] - 2020-05-28
+
+- Fix: revert autoexec back to precompiled.
+
 ## [1.3.6] - 2020-05-27
 
 - Bump for txt2bas@1.10.0 - fixes channel number parsing, adds better validation and fixes some int expression parsing.
