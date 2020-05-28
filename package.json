@@ -3,7 +3,7 @@
   "displayName": "NextBASIC",
   "description": "NextBASIC",
   "publisher": "remysharp",
-  "version": "1.3.9",
+  "version": "1.3.10",
   "prettier": {
     "singleQuote": true
   },
@@ -36,6 +36,11 @@
           "type": "string",
           "default": "",
           "description": "Points the .img file for Spectrum Next used by cspect"
+        },
+        "nextbasic.copyLimit": {
+          "type": "number",
+          "default": 50,
+          "description": "The maximum number of files to copy to the Cpsect image before failing"
         },
         "nextbasic.hdfmonkeyPath": {
           "type": "string",
@@ -158,7 +163,7 @@
   },
   "dependencies": {
     "lodash.debounce": "^4.0.8",
-    "txt2bas": "^1.10.1"
+    "txt2bas": "^1.10.2"
   },
   "repository": {
     "type": "git",

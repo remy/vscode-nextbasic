@@ -13,6 +13,17 @@
     "keywords": {
       "patterns": [
         {
+          "match": "(DEF FN|DEFPROC|PROC)\\s+([A-Za-z]+)s*\\(",
+          "captures": {
+            "1": {
+              "name": "keyword.control.nextbasic"
+            },
+            "2": {
+              "name": "entity.name.function.method.nextbasic"
+            }
+          }
+        },
+        {
           "name": "keyword.control.nextbasic",
           "match": "(?i:\\b(AS|BEEP|BIN|BORDER|BRIGHT|CAT|CIRCLE|CLEAR|CLS|CONTINUE|COPY|DATA|DPOKE|DEF FN|DIM|DRAW|ERASE|FLASH|FORMAT|FOR|GO SUB|GO TO|IF|INK|INPUT|INVERSE|LET|LIST|LLIST|LOAD|LPRINT|MERGE|MOVE|NEW|NEXT|ON|OUT|OVER|PAPER|PAUSE|PLOT|POKE|PRINT|RANDOMIZE|READ|RESTORE|RETURN|RUN|SAVE|VERIFY|AT|LINE|STEP|TAB|THEN|TO|STOP|ELSE|ELSEIF|GOTO|GOSUB|WHILE|UNTIL|BANK|LAYER|PALETTE|SPRITE|TILE|REMOUNT|PWD|CD|MKDIR|RMDIR|DRIVER|PROC|DEFPROC|ENDPROC|LOCAL|OPEN|CLOSE|REPEAT|SPECTRUM)\\b)"
         },

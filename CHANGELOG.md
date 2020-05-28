@@ -2,6 +2,12 @@
 
 All notable changes to the "nextbasic" extension will be documented in this file.
 
+## [1.3.10] - 2020-05-29
+
+- Add user configurable limit to files copied to cspect image
+- Fix highlight function names
+- txt2bas@1.10.2 fixes int keyword validation check
+
 ## [1.3.9] - 2020-05-28
 
 - Fix missing first line on windows
