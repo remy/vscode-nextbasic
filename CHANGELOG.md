@@ -5,8 +5,9 @@ All notable changes to the "nextbasic" extension will be documented in this file
 ## [1.3.10] - 2020-05-29
 
 - Add user configurable limit to files copied to cspect image
+- Add warnings when export fails or run has validation errors
 - Fix highlight function names
-- txt2bas@1.10.2 fixes int keyword validation check
+- txt2bas@1.10.3 fixes validation checks and fraction encoding
 
 ## [1.3.9] - 2020-05-28
 
