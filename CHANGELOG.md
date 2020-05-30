@@ -2,6 +2,10 @@
 
 All notable changes to the "nextbasic" extension will be documented in this file.
 
+## [1.3.11] - 2020-05-30
+
+- txt2bas@1.10.5 validation around integer expressions and INT
+
 ## [1.3.10] - 2020-05-29
 
 - Add user configurable limit to files copied to cspect image
