@@ -2,6 +2,10 @@
 
 All notable changes to the "nextbasic" extension will be documented in this file.
 
+## [1.3.12] - 2020-06-03
+
+- txt2bas@1.10.7 fixes: SPRITE CONT encoding and validation around PLOT, DRAW
+
 ## [1.3.11] - 2020-05-30
 
 - txt2bas@1.10.5 validation around integer expressions and INT
