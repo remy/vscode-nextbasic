@@ -163,7 +163,7 @@
   },
   "dependencies": {
     "lodash.debounce": "^4.0.8",
-    "txt2bas": "^1.10.7"
+    "txt2bas": "^1.10.8"
   },
   "repository": {
     "type": "git",

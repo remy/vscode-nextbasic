@@ -15,33 +15,33 @@
     "syntax": "LOAD fn"
   },
   {
-    "modifier": "DATA",
+    "modifies": "LOAD",
     "description": "Load data from fn into array x()",
-    "token": "LOAD",
+    "token": "DATA",
     "syntax": "LOAD fn DATA x()"
   },
   {
-    "modifier": "CODE",
+    "modifies": "LOAD",
     "description": "Load data from fn into memory at address addr",
-    "token": "LOAD",
+    "token": "CODE",
     "syntax": "LOAD fn CODE addr"
   },
   {
-    "modifier": "SCREEN$",
+    "modifies": "LOAD",
     "description": "Load data from fn onto standard ULA screen",
-    "token": "LOAD",
+    "token": "SCREEN$",
     "syntax": "LOAD fn SCREEN$"
   },
   {
-    "modifier": "BANK",
+    "modifies": "LOAD",
     "description": "Load data from fn into memory bank b at addr",
-    "token": "LOAD",
+    "token": "BANK",
     "syntax": "LOAD fn BANK b,addr"
   },
   {
-    "modifier": "LAYER",
+    "modifies": "LOAD",
     "description": "Load data from fn onto current layer",
-    "token": "LOAD",
+    "token": "LAYER",
     "syntax": "LOAD fn LAYER"
   },
   {
@@ -50,15 +50,39 @@
     "syntax": "MERGE fn"
   },
   {
-    "modifier": "LINE",
+    "modifies": "SAVE",
     "description": "Save BASIC program to file named fn (and set up autorun at line l)",
-    "token": "SAVE",
+    "token": "LINE",
     "syntax": "SAVE fn (LINE l)?"
   },
   {
-    "modifier": "DATA",
+    "modifies": "SAVE",
     "description": "Save data as specified; CODE and BANK have an extra \"length\" parameter",
-    "token": "SAVE",
+    "token": "DATA",
+    "syntax": "SAVE fn (DATA/CODE/SCREEN$/BANK/LAYER..)"
+  },
+  {
+    "modifies": "SAVE",
+    "description": "Save data as specified; CODE and BANK have an extra \"length\" parameter",
+    "token": "CODE",
+    "syntax": "SAVE fn (DATA/CODE/SCREEN$/BANK/LAYER..)"
+  },
+  {
+    "modifies": "SAVE",
+    "description": "Save data as specified; CODE and BANK have an extra \"length\" parameter",
+    "token": "SCREEN$",
+    "syntax": "SAVE fn (DATA/CODE/SCREEN$/BANK/LAYER..)"
+  },
+  {
+    "modifies": "SAVE",
+    "description": "Save data as specified; CODE and BANK have an extra \"length\" parameter",
+    "token": "BANK",
+    "syntax": "SAVE fn (DATA/CODE/SCREEN$/BANK/LAYER..)"
+  },
+  {
+    "modifies": "SAVE",
+    "description": "Save data as specified; CODE and BANK have an extra \"length\" parameter",
+    "token": "LAYER",
     "syntax": "SAVE fn (DATA/CODE/SCREEN$/BANK/LAYER..)"
   },
   {
@@ -67,61 +91,68 @@
     "syntax": "VERIFY fn"
   },
   {
-    "modifier": "DATA",
+    "modifies": "VERIFY",
     "description": "Checks data in memory/array matches contents of fn; does not work with SCREEN$/LAYER because the screen is inevitably changed during the verify operation",
-    "token": "VERIFY",
+    "token": "DATA",
     "syntax": "VERIFY fn (DATA/CODE/BANK)"
   },
   {
-    "description": "Populates all 64 sprite patterns from bank b, taking 256 bytes per sprite and thus using all data in bank b.",
-    "token": "SPRITE BANK",
-    "syntax": "SPRITE BANK x"
+    "modifies": "VERIFY",
+    "description": "Checks data in memory/array matches contents of fn; does not work with SCREEN$/LAYER because the screen is inevitably changed during the verify operation",
+    "token": "CODE",
+    "syntax": "VERIFY fn (DATA/CODE/BANK)"
+  },
+  {
+    "modifies": "VERIFY",
+    "description": "Checks data in memory/array matches contents of fn; does not work with SCREEN$/LAYER because the screen is inevitably changed during the verify operation",
+    "token": "BANK",
+    "syntax": "VERIFY fn (DATA/CODE/BANK)"
   },
   {
     "description": "Define n sprite patterns, starting with p, with data from bank b starting at offset o.",
-    "token": "SPRITE BANK",
+    "token": "BANK",
+    "modifies": "SPRITE",
     "syntax": "SPRITE BANK b, o, p, n"
   },
   {
-    "description": "Choose the first or second palette for sprites. X must be 0 or 1.",
-    "token": "SPRITE PALETTE",
-    "syntax": "SPRITE PALETTE x"
-  },
-  {
-    "modifier": "BANK",
+    "modifies": "BANK",
     "description": "Load sprite palette x (0 or 1) from bank b at offset o. Data is read as with LAYER PALETTE.",
     "token": "SPRITE PALETTE",
     "syntax": "SPRITE PALETTE x BANK b, o"
   },
   {
     "description": "Set sprite palette n, index i, to color v. V is always 9-bit, even if PALETTE DIM 8 is in effect.",
-    "token": "SPRITE PALETTE",
+    "token": "PALETTE",
+    "modifies": "SPRITE",
     "syntax": "SPRITE PALETTE n, i, v"
   },
   {
     "description": "Enable or disable sprites. X must be 0 (disable) or 1 (enable).",
-    "token": "SPRITE PRINT",
+    "token": "PRINT",
+    "modifies": "SPRITE",
     "syntax": "SPRITE PRINT x"
   },
   {
     "description": "Enable or disable sprites crossing the border. X must be 0 (disable) or 1 (enable).",
-    "token": "SPRITE BORDER",
+    "token": "BORDER",
+    "modifies": "SPRITE",
     "syntax": "SPRITE BORDER x"
   },
   {
-    "description": "Set sprite f to image i at position x,y with flags f. f is bitmapped as byte 3 of data packets sent to Sprite Attribute Upload ($xx57).",
+    "description": "Set sprite s to position (x,y), pattern p, x-scaling mx and y-scaling my. If the sprite id s is negative, this sprite is a relative sprite, and its position is relative to the previous anchor sprite (defined with a positive sprite id).",
     "token": "SPRITE",
-    "syntax": "SPRITE s, x, y, i, f"
+    "syntax": "SPRITE s, x, y, p, f, rf, mx, my"
   },
   {
     "description": "Reset all sprite attributes and global settings.",
-    "token": "SPRITE CLEAR",
+    "token": "CLEAR",
+    "modifies": "SPRITE",
     "syntax": "SPRITE CLEAR"
   },
   {
-    "modifier": "RESTORE",
+    "token": "RESTORE",
     "description": "Sets DATA read point to start of line x in bank b",
-    "token": "BANK",
+    "modifies": "BANK",
     "syntax": "BANK b RESTORE x"
   },
   {
@@ -140,20 +171,21 @@
     "syntax": "RESTORE x"
   },
   {
-    "modifier": "GO TO",
+    "modifies": "BANK",
     "description": "Jump execution to line x stored in bank b. b=-1 for main program",
-    "token": "BANK",
+    "token": "GO TO",
     "syntax": "BANK b GO TO x"
   },
   {
-    "modifier": "GO SUB",
+    "modifies": "BANK",
     "description": "Jump execution to line x stored in bank b, storing current location on gosub stack. b=-1 for main program",
-    "token": "BANK",
+    "token": "SUB",
     "syntax": "BANK b GO SUB x"
   },
   {
     "description": "Creates a user defined function based on a parameterised expression. Will not work if moved into any bank other than the main program",
-    "token": "DEF FN",
+    "token": "FN",
+    "modifies": "DEF",
     "syntax": "DEF FN func(param[,param..])=expr"
   },
   {
@@ -162,25 +194,27 @@
     "syntax": "DIM a(x[,y]..)"
   },
   {
-    "modifier": "TO",
+    "modifies": "FOR",
     "description": "Starts FOR loop between given numeric values (with given step)",
-    "token": "FOR",
+    "token": "TO",
     "syntax": "FOR var = start TO end [STEP step]?"
   },
   {
     "description": "Jump execution to line X in the same bank",
-    "token": "GO TO",
+    "token": "TO",
+    "modifies": "GO",
     "syntax": "GO TO x"
   },
   {
     "description": "Jump execution to line X in the same bank, storing current location (and bank) on gosub stack",
-    "token": "GO SUB",
+    "token": "SUB",
+    "modifies": "GO",
     "syntax": "GO SUB x"
   },
   {
-    "modifier": "THEN",
+    "modifies": "IF",
     "description": "Run statements only if expression c is true",
-    "token": "IF",
+    "token": "THEN",
     "syntax": "IF c THEN statements.."
   },
   {
@@ -204,25 +238,27 @@
     "syntax": "RETURN"
   },
   {
-    "modifier": "AT",
-    "description": "Draw the entire screen from the tilemap (from tile offset (x,y))",
-    "token": "TILE",
-    "syntax": "TILE [AT x,y]?"
+    "modifies": "TILE",
+    "description": "Draw a section of the tilemap w,h wide (from tile offset x,y in the tilemap) (to tile offset x2,y2 on the screen)",
+    "token": "AT",
+    "syntax": "TILE w,h [AT x,y]? [TO x2,y2]?"
   },
   {
-    "modifier": "AT",
+    "modifies": "TILE",
     "description": "Draw a section of the tilemap w,h wide (from tile offset x,y in the tilemap) (to tile offset x2,y2 on the screen)",
-    "token": "TILE",
+    "token": "TO",
     "syntax": "TILE w,h [AT x,y]? [TO x2,y2]?"
   },
   {
     "description": "Set bank n as the root of tile graphics (which may occupy up to 4 banks in the case of 16x16 tiles).",
-    "token": "TILE BANK",
+    "token": "BANK",
+    "modifies": "TILE",
     "syntax": "TILE BANK n"
   },
   {
     "description": "Set bank n offset o as the root of tilemap data, with tilemap width v and tile size t (t must be 8 or 16 for 8x8 or 16x16 tiles)",
-    "token": "TILE DIM",
+    "token": "DIM",
+    "modifies": "TILE",
     "syntax": "TILE DIM n, o, v, t"
   },
   {
@@ -242,31 +278,31 @@
   },
 
   {
-    "modifier": "AT",
+    "modifies": "AT",
     "syntax": "INPUT AT x,y",
     "description": "Moves text cursor to the given text cell",
     "token": "INPUT"
   },
   {
-    "modifier": "TAB",
+    "modifies": "TAB",
     "syntax": "INPUT TAB x",
     "description": "Inserts spaces until text cursor is in column x",
     "token": "INPUT"
   },
   {
-    "modifier": "INK",
+    "modifies": "INK",
     "syntax": "INPUT INK x",
     "description": "Changes the appropriate color for the duration of the print/input statement",
     "token": "INPUT"
   },
   {
-    "modifier": "PAPER",
+    "modifies": "PAPER",
     "syntax": "INPUT PAPER x",
     "description": "Changes the appropriate color for the duration of the print/input statement",
     "token": "INPUT"
   },
   {
-    "modifier": "LINE",
+    "modifies": "LINE",
     "syntax": "INPUT LINE x$",
     "description": "INPUT only, reads a string without the prompting quotes ",
     "token": "INPUT"
@@ -298,77 +334,79 @@
     "syntax": "PRINT specifier [connector specifier].."
   },
   {
-    "modifier": "AT",
+    "modifies": "AT",
     "syntax": "PRINT AT x,y",
     "description": "Moves text cursor to the given text cell",
     "token": "PRINT"
   },
   {
-    "modifier": "TAB",
+    "modifies": "TAB",
     "syntax": "PRINT TAB x",
     "description": "Inserts spaces until text cursor is in column x",
     "token": "PRINT"
   },
   {
-    "modifier": "INK",
+    "modifies": "INK",
     "syntax": "PRINT INK x",
     "description": "Changes the appropriate color for the duration of the print/input statement",
     "token": "PRINT"
   },
   {
-    "modifier": "PAPER",
+    "modifies": "PAPER",
     "syntax": "PRINT PAPER x",
     "description": "Changes the appropriate color for the duration of the print/input statement",
     "token": "PRINT"
   },
   {
-    "modifier": "LINE",
+    "modifies": "LINE",
     "syntax": "PRINT LINE x$",
     "description": "INPUT only, reads a string without the prompting quotes ",
     "token": "PRINT"
   },
   {
     "description": "Re-enable RAMdisk having been disabled by previous BANK 1346 USR",
-    "token": "BANK 1346 FORMAT",
+    "token": "FORMAT",
+    "modifies": "BANK",
     "syntax": "BANK 1346 FORMAT"
   },
   {
     "description": "Disable RAMdisk, allowing banks 1, 3, 4, and 6 to be used",
-    "token": "BANK 1346 USR",
+    "token": "USR",
+    "modifies": "BANK,",
     "syntax": "BANK 1346 USR"
   },
   {
-    "modifier": "COPY TO",
+    "modifies": "BANK",
     "description": "Copy entire bank b to bank c",
-    "token": "BANK",
+    "token": "TO",
     "syntax": "BANK b COPY TO c"
   },
   {
-    "modifier": "COPY",
+    "modifies": "BANK",
     "description": "Copy len bytes from start in bank b, to start in bank c",
-    "token": "BANK",
+    "token": "COPY",
     "syntax": "BANK b COPY start, len TO c, start"
   },
   {
-    "modifier": "ERASE",
+    "modifies": "BANK",
     "description": "Erase all data in bank by overwriting with zeros (or x)",
-    "token": "BANK",
+    "token": "ERASE",
     "syntax": "BANK b ERASE x?"
   },
   {
-    "modifier": "ERASE",
+    "modifies": "BANK",
     "description": "Overwrite len bytes of data at off in bank b with value",
-    "token": "BANK",
+    "token": "ERASE",
     "syntax": "BANK b ERASE off, len, value"
   },
   {
-    "modifier": "PEEK",
+    "modifies": "PEEK",
     "description": "Returns value at given address in bank b (address is from start of bank)",
     "token": "BANK",
     "syntax": "BANK b PEEK addr"
   },
   {
-    "modifier": "POKE",
+    "modifies": "POKE",
     "description": "Sets address in bank b to value (address is from start of bank)",
     "token": "BANK",
     "syntax": "BANK b POKE addr, value"
@@ -394,19 +432,19 @@
     "syntax": "OUT port, value"
   },
   {
-    "modifier": "LINE",
+    "modifies": "LINE",
     "description": "Copies lines x,y into bank b. Once this is done, these lines cannot be edited except by overwriting them with another BANK..LINE command. Cannot be used in a program.",
     "token": "BANK",
     "syntax": "BANK b LINE x,y"
   },
   {
-    "modifier": "LIST",
+    "modifies": "LIST",
     "description": "Lists source code in bank b (from line x)",
     "token": "BANK",
     "syntax": "BANK b LIST x?"
   },
   {
-    "modifier": "MERGE",
+    "modifies": "MERGE",
     "description": "Adds all basic lines in bank b to main program",
     "token": "BANK",
     "syntax": "BANK b MERGE"
@@ -469,7 +507,7 @@
   {
     "description": "Draw line from plot cursor to given coordinate",
     "token": "DRAW",
-    "syntax": "DRAW [modifier or x,y].."
+    "syntax": "DRAW [modifies or x,y].."
   },
   {
     "description": "Enable or disable ink/paper cycling. n must be 0 or 1. Not legal on non-ULA layers or if Enhanced ULA is enabled.",
@@ -482,84 +520,80 @@
     "syntax": "INK c"
   },
   {
-    "description": "Selects active layer for graphics operations. LAYER 0 is an unenhanced ULA screen. LAYER 1 is the ULA screen but with enhancements and with the origin at the top left (not the bottom left). LAYER 2 is, well, Layer 2.",
+    "description": "Selects active layer for graphics operations. LAYER 0 is an unenhanced ULA screen. LAYER 1 is the ULA screen but with enhancements and with the origin at the top left (not the bottom left). LAYER 2 is, well, Layer 2.\n\n1 = Standard Spectrum, 2 = Timex hires, 3 = Timex hicolour, 0 = Lores layer.",
     "token": "LAYER",
     "syntax": "LAYER x"
   },
   {
-    "description": "Sets mode for Layer 1 based on x. 1 = Standard Spectrum, 2 = Timex hires, 3 = Timex hicolour, 0 = Lores layer.",
-    "token": "LAYER 1",
-    "syntax": "LAYER 1,x"
-  },
-  {
-    "description": "Selects Layer 2 and determines if it is displayed or not (x must be 0 or 1)",
-    "token": "LAYER 2",
-    "syntax": "LAYER 2,x"
-  },
-  {
     "description": "Sets the scroll display offset for the current layer.",
-    "token": "LAYER AT",
+    "token": "AT",
+    "modifies": "LAYER",
     "syntax": "LAYER AT x, y"
   },
   {
     "description": "Only when Layer 2 is selected, selects the first bank for layer 2 (f) and shadow layer 2 (b). Note that a layer 2 screen occupies 3 banks.",
-    "token": "LAYER BANK",
+    "token": "BANK",
+    "modifies": "LAYER",
     "syntax": "LAYER BANK f, b"
   },
   {
     "description": "Resets all layer settings",
-    "token": "LAYER CLEAR",
+    "token": "CLEAR",
+    "modifies": "LAYER",
     "syntax": "LAYER CLEAR"
   },
   {
     "description": "Sets visible area for current layer",
-    "token": "LAYER DIM",
+    "token": "DIM",
+    "modifies": "LAYER",
     "syntax": "LAYER DIM left, top, right, bottom"
   },
   {
     "description": "Fills a region at x,y, of size w,h, with palette index f (or the transparent value)",
-    "token": "LAYER ERASE",
+    "token": "ERASE",
+    "modifies": "LAYER",
     "syntax": "LAYER ERASE x, y, w, h [,f]?"
   },
   {
     "description": "Sets layer ordering",
-    "token": "LAYER OVER",
+    "token": "OVER",
+    "modifies": "LAYER",
     "syntax": "LAYER OVER"
   },
   {
-    "description": "Choose which of the two palettes is used for the active layer (x must be 0 or 1)",
-    "token": "LAYER PALETTE",
-    "syntax": "LAYER PALETTE x"
-  },
-  {
     "description": "Sets palette index i in palette in to color value v. V is always 9 bit, even if PALETTE DIM 8 is set.",
-    "token": "LAYER PALETTE",
+    "token": "PALETTE",
+    "modifies": "LAYER",
     "syntax": "LAYER PALETTE n, i, v"
   },
   {
-    "modifier": "BANK",
+    "modifies": "LAYER",
     "description": "Loads current layer's palette n (0 or 1) from bytes starting at offset in bank b. If PALETTE DIM 8 is set, each byte is one color. If PALETTE DIM 9 is set, each color needs two bytes, but only one bit of the second is used.",
-    "token": "LAYER PALETTE",
+    "token": "BANK",
     "syntax": "LAYER PALETTE n BANK b, offset"
   },
   {
     "description": "Resets all palettes and palette settings",
-    "token": "PALETTE CLEAR",
+    "token": "CLEAR",
+    "modifies": "PALETTE",
     "syntax": "PALETTE CLEAR"
   },
   {
     "description": "Sets number of color bits in the active palette; x must be 8 or 9",
-    "token": "PALETTE DIM",
+    "token": "DIM",
+    "modifies": "PALETTE",
     "syntax": "PALETTE DIM x"
   },
   {
     "description": "Enables Enhanced ULA colors with x inks. X must be a bitmask which masks off bits on the right of a value (1, 3, 7, 15, 31, 63, 127 or 255)",
-    "token": "PALETTE FORMAT",
+    "token": "FORMAT",
+    "modifies": "PALETTE",
     "syntax": "PALETTE FORMAT x"
   },
   {
     "description": "Sets the global transparency color to x",
-    "token": "PALETTE OVER",
+    "token": "OVER",
+    "modifies": "PALETTE",
     "syntax": "PALETTE OVER x"
   },
   {
@@ -570,7 +604,7 @@
   {
     "description": "Plot listed points as single pixels on current layer",
     "token": "PLOT",
-    "syntax": "PLOT [modifier or x,y].."
+    "syntax": "PLOT [modifies or x,y].."
   },
   {
     "description": "Stores the color at point x, y on the ULA screen in variable var",
@@ -608,9 +642,18 @@
     "syntax": "ABS x"
   },
   {
-    "modifier": "ACS",
     "description": "Returns inverse trigonometric ratio (arcsin, arccos, arctan)",
     "token": "ASN",
+    "syntax": "ASN x, ACS x, ATN x"
+  },
+  {
+    "description": "Returns inverse trigonometric ratio (arcsin, arccos, arctan)",
+    "token": "ACS",
+    "syntax": "ASN x, ACS x, ATN x"
+  },
+  {
+    "description": "Returns inverse trigonometric ratio (arcsin, arccos, arctan)",
+    "token": "ATN",
     "syntax": "ASN x, ACS x, ATN x"
   },
   {
@@ -697,5 +740,69 @@
     "description": "Converts string number or expression into a number",
     "token": "VAL",
     "syntax": "VAL x"
+  },
+  {
+    "description": "Call procedure defined with DEFPROC. The number of expressions and each of their types must match those defined in the DEFPROC, otherwise a Q Parameter Error report will be generated. TO paramlist will copy return values declared by ENDPROC to up to 8 variables.",
+    "token": "PROC",
+    "syntax": "PROC name (expressionlist) [TO paramlist]",
+    "modifies": "TO"
+  },
+  {
+    "syntax": "ENDPROC [= expressionlist]",
+    "token": "ENDPROC",
+    "description": "Ends execution of a procedure defined with DEFPROC and returns up to 8 local values via the optional expressionlist to the calling PROC command."
+  },
+  {
+    "syntax": "DEFPROC name ([paramlist])",
+    "token": "DEFPROC",
+    "description": "Defines a procedure, where name follows the same naming rules as standard numeric variables. paramlist is an optional list of up to 8 variable names (simple strings, numeric variables or integer variables, but not arrays of any type). See ENDPROC."
+  },
+  {
+    "token": "OVER",
+    "modifies": "SPRITE",
+    "syntax": "%SPRITE OVER(s1, s2 [TO s3] [,overlapX [,overlapY] ])",
+    "description": "Performs bounding-box collision detection between sprite s1, and a single other sprite s2 or a range of sprites s2..s3."
+  },
+  {
+    "token": "AT",
+    "modifies": "SPRITE",
+    "syntax": "%SPRITE AT(s,c)",
+    "description": "Returns a coordinate or other movement-related value for the sprite:\n %SPRITE AT(s,0) returns x coordinate\n %SPRITE AT(s,1) returns y coordinate\n %SPRITE AT(s,2) returns pattern number\n %SPRITE AT(s,3) returns x step\n %SPRITE AT(s,4) returns y step\n %SPRITE AT(s,5) returns delay before the sprite next moves\n (0 means the sprite will move on the next SPRITE MOVE command)"
+  },
+  {
+    "token": "CONTINUE",
+    "modifies": "SPRITE",
+    "syntax": "SPRITE CONTINUE s, [x1 [TO x2]] [STEP xs] [RUN or STOP], [y1 [TO y2]] [STEP ys] [RUN or STOP], [p1 [TO p2]], [f], [r], [d]",
+    "description": "Turns automatic movement back on for a sprite"
+  },
+  {
+    "token": "PAUSE",
+    "modifies": "SPRITE",
+    "syntax": "SPRITE PAUSE s1 [TO s2]",
+    "description": "Turns off automatic movement for a single sprite or range of sprites."
+  },
+  {
+    "syntax": "SPRITE STOP",
+    "description": "Turns off immediate updates and enables batching mode.",
+    "modifies": "SPRITE",
+    "token": "STOP"
+  },
+  {
+    "syntax": "SPRITE RUN",
+    "description": "Turns immediate updates back on, disabling batching mode (this is also done by the SPRITE CLEAR command).",
+    "modifies": "SPRITE",
+    "token": "RUN"
+  },
+  {
+    "syntax": "SPRITE MOVE",
+    "description": "When batching mode is enabled, sends all outstanding sprite changes to the hardware immediately.",
+    "modifies": "SPRITE",
+    "token": "MOVE"
+  },
+  {
+    "syntax": "SPRITE MOVE INT [y]",
+    "description": "The same as SPRITE MOVE, but first waits for the 50/60Hz interrupt. With optional y changes are not sent to the hardware until after the TV scanline corresponding to sprite coordinate y. This can be used to avoid flicker by ensuring sprite changes don't occur whilst the TV is midway through displaying the sprite(s) in question.",
+    "modifies": "SPRITE",
+    "token": "INT"
   }
 ]
