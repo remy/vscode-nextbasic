@@ -218,6 +218,11 @@
     "syntax": "IF c THEN statements.."
   },
   {
+    "token": "ELSE",
+    "description": "See IF ... THEN ... ELSE",
+    "syntax": "ELSE"
+  },
+  {
     "description": "Sets variable var to expr",
     "token": "LET",
     "syntax": "LET var = expr"
@@ -485,6 +490,12 @@
     "syntax": "RUN x?"
   },
   {
+    "modifies": "RUN",
+    "token": "AT",
+    "description": "RUN AT speed Changes the speed of the ZX Spectrum Next",
+    "syntax": "RUN AT speed"
+  },
+  {
     "description": "Set ULA border to color N",
     "token": "BORDER",
     "syntax": "BORDER n"
@@ -577,6 +588,12 @@
     "token": "CLEAR",
     "modifies": "PALETTE",
     "syntax": "PALETTE CLEAR"
+  },
+  {
+    "modifies": "BANK",
+    "token": "CLEAR",
+    "syntax": "BANK m CLEAR",
+    "description": "Marks bank m as free for use by other parts of the system"
   },
   {
     "description": "Sets number of color bits in the active palette; x must be 8 or 9",
