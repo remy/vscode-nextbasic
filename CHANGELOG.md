@@ -2,6 +2,12 @@
 
 All notable changes to the "nextbasic" extension will be documented in this file.
 
+## [1.3.14] - 2020-06-08
+
+- Add more hover help and improve lookups
+- Fix to send supporting files to cspect in sequence to mitigate race condition
+- txt2bas@1.10.11: validation fixes, and encoding fix on `MOD` statements
+
 ## [1.3.13] - 2020-06-04
 
 - txt2bas@1.10.8 fixes: validation on IF statements and int functions
