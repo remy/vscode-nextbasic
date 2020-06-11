@@ -2,6 +2,8 @@
 
 ZX Spectrum NextBASIC syntax highlighting for Visual Studio Code.
 
+![vscode-nextbasic demo](https://user-images.githubusercontent.com/13700/84424388-f00f9600-ac17-11ea-88f3-cd14a082d38f.gif)
+
 ## Features
 
 - Import and export binary NextBASIC files

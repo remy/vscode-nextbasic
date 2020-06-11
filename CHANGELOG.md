@@ -2,6 +2,11 @@
 
 All notable changes to the "nextbasic" extension will be documented in this file.
 
+## [1.3.15] - 2020-06-11
+
+- Fix missing `PLAY` keyword
+- txt2bas@1.10.12: validation fixes
+
 ## [1.3.14] - 2020-06-08
 
 - Add more hover help and improve lookups
