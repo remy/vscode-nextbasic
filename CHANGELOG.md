@@ -5,6 +5,7 @@ All notable changes to the "nextbasic" extension will be documented in this file
 ## [1.4.0] - 2020-06-12
 
 - Add "export to BANK" option for exporting code to `BANK` binary, allowing for `LOAD "file" BANK a`
+- Add import also supports importing BANKed NextBASIC files
 
 ## [1.3.15] - 2020-06-11
 
