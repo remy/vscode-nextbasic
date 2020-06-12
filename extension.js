@@ -25,7 +25,7 @@ function activate(context) {
   // The commandId parameter must match the command field in package.json
   context.subscriptions.push(newLineCommand());
   context.subscriptions.push(importBasicCommand());
-  context.subscriptions.push(exportBasic());
+  context.subscriptions.push(...exportBasic());
   context.subscriptions.push(toggleCommentsCommand());
   context.subscriptions.push(formatOnType());
   context.subscriptions.push(definitions());
