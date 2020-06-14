@@ -2,6 +2,10 @@
 
 All notable changes to the "nextbasic" extension will be documented in this file.
 
+## [1.4.1] - 2020-06-14
+
+- txt2bas@1.12.0: encoding and validation fixes (around `PEEK$`), and better integer expression support
+
 ## [1.4.0] - 2020-06-12
 
 - Add "export to BANK" option for exporting code to `BANK` binary, allowing for `LOAD "file" BANK a`
