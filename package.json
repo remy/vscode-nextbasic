@@ -3,7 +3,7 @@
   "displayName": "NextBASIC",
   "description": "NextBASIC",
   "publisher": "remysharp",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "prettier": {
     "singleQuote": true
   },
@@ -167,7 +167,7 @@
   },
   "dependencies": {
     "lodash.debounce": "^4.0.8",
-    "txt2bas": "^1.12.0"
+    "txt2bas": "^1.12.1"
   },
   "repository": {
     "type": "git",
