@@ -2,6 +2,10 @@
 
 All notable changes to the "nextbasic" extension will be documented in this file.
 
+## [1.4.3] - 2020-06-24
+
+- txt2bas@1.12.2: fixes parsing error in dot command arguments
+
 ## [1.4.2] - 2020-06-21
 
 - txt2bas@1.12.1: fixes int after `INT` parsing, and fixes dot commands after `ON ERROR`
