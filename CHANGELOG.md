@@ -2,6 +2,11 @@
 
 All notable changes to the "nextbasic" extension will be documented in this file.
 
+## [1.4.4] - 2020-06-30
+
+- Fix recursive directory send to Cspect
+- txt2bas@1.12.4: bug fix in parser for `UNTIL` and integers
+
 ## [1.4.3] - 2020-06-24
 
 - txt2bas@1.12.2: fixes parsing error in dot command arguments
