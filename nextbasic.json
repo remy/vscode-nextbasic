@@ -411,6 +411,12 @@
     "syntax": "BANK b PEEK addr"
   },
   {
+    "modifies": "BANK",
+    "description": "Reads a bit7-terminated string from memory or bank (NOTE: bit 7 will still be set on the string that is returned)",
+    "token": "PEEK$",
+    "syntax": "BANK b PEEK$ (addr, len)"
+  },
+  {
     "modifies": "POKE",
     "description": "Sets address in bank b to value (address is from start of bank)",
     "token": "BANK",
@@ -427,9 +433,31 @@
     "syntax": "PEEK addr"
   },
   {
+    "description": "Read double-byte (16-bit word) from memory",
+    "token": "DPEEK",
+    "syntax": "DPEEK addr"
+  },
+  {
+    "description": "Read double-byte (16-bit word) from offset in bank",
+    "token": "DPEEK",
+    "modifies": "BANK",
+    "syntax": "BANK b DPEEK addr"
+  },
+  {
     "description": "Sets address to value",
     "token": "POKE",
     "syntax": "POKE addr, value"
+  },
+  {
+    "description": "Sets address to double value (16-bit word)",
+    "token": "DPOKE",
+    "syntax": "DPOKE addr, valuelist"
+  },
+  {
+    "description": "Sets address to double value (16-bit word) from offset in bank",
+    "modifies": "BANK",
+    "token": "DPOKE",
+    "syntax": "BANK b DPOKE addr, valuelist"
   },
   {
     "description": "Sends value to port",
@@ -458,6 +486,22 @@
     "description": "Repeats last command or restarts from error location",
     "token": "CONTINUE",
     "syntax": "CONTINUE"
+  },
+  {
+    "description": "Statement or statements in statementlist and statement list2 are repeated until x is true. The loop is terminated skipping statementlist2 if y evaluates to false",
+    "token": "REPEAT",
+    "syntax": "REPEAT statementlist"
+  },
+  {
+    "description": "Statement or statements in statementlist and statement list2 are repeated until x is true. The loop is terminated skipping statementlist2 if y evaluates to false",
+    "token": "UNTIL",
+    "modifies": "REPEAT",
+    "syntax": "REPEAT UNTIL x"
+  },
+  {
+    "description": "Used within a REPEAT loop, can provide an al ter native way of leaving the loop be fore reach ing the REPEAT UNTIL statement",
+    "token": "WHILE",
+    "syntax": "WHILE cond"
   },
   {
     "description": "Resets variables, clears screen, resets plot cursor (and sets ramtop to X)",
