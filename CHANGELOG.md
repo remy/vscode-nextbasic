@@ -2,6 +2,11 @@
 
 All notable changes to the "nextbasic" extension will be documented in this file.
 
+## [1.4.4] - 2020-07-16
+
+- Fix new line sometimes clipping end of line during format
+- txt2bas@1.12.7: Error on bank lines > 256 bytes, many validation tweaks plus edge case encoding issues
+
 ## [1.4.4] - 2020-06-30
 
 - Fix recursive directory send to Cspect
