@@ -76,8 +76,16 @@
           "end": "(?<=\\d)\\s"
         },
         {
-          "name": "entity.name.directive.nextbasic",
+          "name": "entity.other.nextbasic",
           "match": "^(#\\s*(?:autostart|autoline|program)\\s+(?:.*))$"
+        },
+        {
+          "name": "support.constant.nextbasic",
+          "match": "^(#\\s*(?:define)\\s+(?:.*))$"
+        },
+        {
+          "name": "support.constant.nextbasic",
+          "match": "(#[a-zA-Z]*)"
         },
         {
           "name": "comment.line.directive.nextbasic",

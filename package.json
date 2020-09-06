@@ -3,7 +3,7 @@
   "displayName": "NextBASIC",
   "description": "NextBASIC",
   "publisher": "remysharp",
-  "version": "1.4.5",
+  "version": "1.4.8",
   "prettier": {
     "singleQuote": true
   },
@@ -65,6 +65,11 @@
           "type": "boolean",
           "default": true,
           "description": "On [enter] add new line number and format current line"
+        },
+        "nextbasic.stripComments": {
+          "type": "boolean",
+          "default": false,
+          "description": "Strip comments during export"
         }
       }
     },
@@ -167,7 +172,7 @@
   },
   "dependencies": {
     "lodash.debounce": "^4.0.8",
-    "txt2bas": "^1.12.7"
+    "txt2bas": "^1.14.0"
   },
   "repository": {
     "type": "git",

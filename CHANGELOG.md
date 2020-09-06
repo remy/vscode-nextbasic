@@ -2,6 +2,22 @@
 
 All notable changes to the "nextbasic" extension will be documented in this file.
 
+## [1.4.8] - 2020-09-06
+
+- Fix spaces in Windows paths
+- Add support for stripping comments from exports
+- Fix extra space in uncomment with semi-colons
+- txt2bas@1.14.0: add support for #define statements, strip comments support
+
+## [1.4.7] - 2020-07-17
+
+- txt2bas@1.12.10: fixes parsing error in int expression functions (like `% SPRITE OVER`) and it's arguments in parens.
+
+## [1.4.6] - 2020-07-17
+
+- txt2bas@1.12.8: fixes validator of int expressions after colon
+- Fix Allow cspect to launch even with validation errors
+
 ## [1.4.5] - 2020-07-16
 
 - Fix new line (sometimes) clipping end of line during format
