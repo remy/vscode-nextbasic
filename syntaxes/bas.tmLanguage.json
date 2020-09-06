@@ -81,15 +81,15 @@
         },
         {
           "name": "support.constant.nextbasic",
-          "match": "^(#\\s*(?:define)\\s+(?:.*))$"
-        },
-        {
-          "name": "support.constant.nextbasic",
-          "match": "(#[a-zA-Z]*)"
+          "match": "^(#(?:define)\\s+(?:.*))$"
         },
         {
           "name": "comment.line.directive.nextbasic",
           "match": "^(#(?:.*))$"
+        },
+        {
+          "name": "support.constant.nextbasic",
+          "match": "(#[a-zA-Z]*)"
         },
         {
           "name": "constant.numeric.nextbasic",
