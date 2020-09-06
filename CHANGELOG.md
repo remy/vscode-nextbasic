@@ -2,6 +2,11 @@
 
 All notable changes to the "nextbasic" extension will be documented in this file.
 
+## [1.5.0] - 2020-09-06
+
+- Add export to .tap
+- Fix # definitions being striped when in "normal" non-autoline mode
+
 ## [1.4.8] - 2020-09-06
 
 - Fix spaces in Windows paths

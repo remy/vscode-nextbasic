@@ -17,6 +17,8 @@ ZX Spectrum NextBASIC syntax highlighting for Visual Studio Code.
 - Format on edit and format full document
 - Collapse DEFPROC
 - Help on hover
+- Export to .bas as +3DOS format or .tap
+- Support directives: `#autostart n`, `#autoline n,m`, `#program str` and custom `#define key=value` (and replaces `#key` instances in BASIC)
 
 ## Cspect support
 

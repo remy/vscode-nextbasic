@@ -3,7 +3,7 @@
   "displayName": "NextBASIC",
   "description": "NextBASIC",
   "publisher": "remysharp",
-  "version": "1.4.8",
+  "version": "1.5.0",
   "prettier": {
     "singleQuote": true
   },
@@ -133,6 +133,10 @@
       {
         "title": "NextBASIC: export to binary .bas",
         "command": "nextbasic.export"
+      },
+      {
+        "title": "NextBASIC: export to .tap",
+        "command": "nextbasic.tap-export"
       },
       {
         "title": "NextBASIC: export to BANK",
