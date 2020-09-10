@@ -2,6 +2,14 @@
 
 All notable changes to the "nextbasic" extension will be documented in this file.
 
+## [1.5.2] - 2020-09-10
+
+- Add more detailed error reporting if cspect fails to launch
+
+## [1.5.1] - 2020-09-06
+
+- txt2bas@1.14.1: small validation fixes around `#define` and values.
+
 ## [1.5.0] - 2020-09-06
 
 - Add export to .tap
