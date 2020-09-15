@@ -2,6 +2,11 @@
 
 All notable changes to the "nextbasic" extension will be documented in this file.
 
+## [1.5.3] - 2020-09-15
+
+- Fix issues in format document when spaces were being incorrectly striped
+- Add expose the current txt2bas version (useful for debugging)
+
 ## [1.5.2] - 2020-09-10
 
 - Add more detailed error reporting if cspect fails to launch

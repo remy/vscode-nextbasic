@@ -15,6 +15,7 @@ const runInCspect = require('./lib/auto-run.task');
 const validationDiagnostic = require('./lib/validation.diagnostic');
 const shift = require('./lib/shift.command');
 const renumber = require('./lib/renumber.command');
+const txt2basVersion = require('./lib/txt2bas-version.command');
 
 /**
  * @param {vscode.ExtensionContext} context
@@ -37,6 +38,7 @@ function activate(context) {
   context.subscriptions.push(hoverHelp());
   context.subscriptions.push(runInCspect(context.extensionPath));
   context.subscriptions.push(validationDiagnostic(context));
+  context.subscriptions.push(txt2basVersion());
 }
 
 function deactivate() {}

@@ -3,7 +3,7 @@
   "displayName": "NextBASIC",
   "description": "NextBASIC",
   "publisher": "remysharp",
-  "version": "1.5.2",
+  "version": "1.5.3",
   "prettier": {
     "singleQuote": true
   },
@@ -45,7 +45,7 @@
         "nextbasic.hdfmonkeyPath": {
           "type": "string",
           "default": "hdfmonkey",
-          "description": "Points the hdfmonkey binary, defaults to searching your $PATH"
+          "description": "Points the full path to the hdfmonkey executable, defaults to searching your $PATH"
         },
         "nextbasic.commentWith": {
           "type": "string",
@@ -115,6 +115,12 @@
         "command": "nextbasic.commentLine",
         "key": "ctrl+/",
         "when": "!isMac && editorLangId == nextbasic"
+      },
+      {
+        "key": "shift+ctrl+r",
+        "mac": "shift+cmd+r",
+        "command": "nextbasic.run",
+        "when": "editorTextFocus && editorLangId == 'nextbasic'"
       }
     ],
     "commands": [
@@ -153,6 +159,10 @@
       {
         "title": "NextBASIC: Comment",
         "command": "nextbasic.commentLine"
+      },
+      {
+        "title": "NextBASIC: txt2bas version",
+        "command": "nextbasic.txt2basVersion"
       }
     ]
   },
@@ -176,7 +186,7 @@
   },
   "dependencies": {
     "lodash.debounce": "^4.0.8",
-    "txt2bas": "^1.14.1"
+    "txt2bas": "^1.14.3"
   },
   "repository": {
     "type": "git",
