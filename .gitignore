@@ -2,3 +2,4 @@ node_modules
 .vscode-test/
 *.vsix
 cspect.log
+cspect_win.dat

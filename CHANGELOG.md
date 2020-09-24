@@ -2,6 +2,11 @@
 
 All notable changes to the "nextbasic" extension will be documented in this file.
 
+## [1.5.4] - 2020-09-24
+
+- Fix issue when definition lookup fails if `DEFPROC` is in a comment
+- txt2bas@1.14.4: smarter validation around PRINT(like) statements
+
 ## [1.5.3] - 2020-09-15
 
 - Fix issues in format document when spaces were being incorrectly striped
