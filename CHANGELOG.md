@@ -2,6 +2,18 @@
 
 All notable changes to the "nextbasic" extension will be documented in this file.
 
+## [1.5.7] - 2020-09-25
+
+- txt2bas@1.14.9: ensure `#define` statements keep the proper tokenised values, important around using a define on a numeric then later casting as an int: https://github.com/remy/txt2bas/issues/26
+
+## [1.5.6] - 2020-09-24
+
+- txt2bas@1.14.8: multiple patches for print-ish (`INPUT` included) validation
+
+## [1.5.5] - 2020-09-24
+
+- txt2bas@1.14.5: quick patch for `SPRITE PRINT` with wrong validation error
+
 ## [1.5.4] - 2020-09-24
 
 - Fix issue when definition lookup fails if `DEFPROC` is in a comment
