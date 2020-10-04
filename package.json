@@ -3,7 +3,7 @@
   "displayName": "NextBASIC",
   "description": "NextBASIC",
   "publisher": "remysharp",
-  "version": "1.5.7",
+  "version": "1.5.8",
   "prettier": {
     "singleQuote": true
   },
@@ -75,7 +75,8 @@
     },
     "configurationDefaults": {
       "[nextbasic]": {
-        "editor.formatOnType": true
+        "editor.formatOnType": true,
+        "files.eol": "\n"
       }
     },
     "languages": [
