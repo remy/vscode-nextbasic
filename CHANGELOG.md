@@ -2,6 +2,10 @@
 
 All notable changes to the "nextbasic" extension will be documented in this file.
 
+## [1.5.8] - 2020-09-25
+
+- Fix Windows carriage return and remove them during file formatting or export.
+
 ## [1.5.7] - 2020-09-25
 
 - txt2bas@1.14.9: ensure `#define` statements keep the proper tokenised values, important around using a define on a numeric then later casting as an int: https://github.com/remy/txt2bas/issues/26
