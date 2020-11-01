@@ -2,9 +2,13 @@
 
 All notable changes to the "nextbasic" extension will be documented in this file.
 
+## [1.6.1] - 2020-11-01
+
+- Fix: quick simplify - use \A for UDG A (instead of \UDGA)
+
 ## [1.6.0] - 2020-11-01
 
-- Add: UDG character support through simple escaped "\UDGx" where x is A-U
+- Add: UDG character support through simple escaped "\A" where x is A-U
 - txt2bas@1.15.0
 
 ## [1.5.9] - 2020-10-23
