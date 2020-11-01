@@ -2,6 +2,11 @@
 
 All notable changes to the "nextbasic" extension will be documented in this file.
 
+## [1.6.0] - 2020-11-01
+
+- Add: UDG character support through simple escaped "\UDGx" where x is A-U
+- txt2bas@1.15.0
+
 ## [1.5.9] - 2020-10-23
 
 - txt2bas@1.14.9: ensure `#define` statements keep the proper tokenised values, important around using a define on a numeric then later casting as an int: https://github.com/remy/txt2bas/issues/26 (original release didn't bump correctly)

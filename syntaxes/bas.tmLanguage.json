@@ -111,6 +111,10 @@
       "end": "\"",
       "patterns": [
         {
+          "name": "constant.character.escape.nextbasic.udg.nextbasic",
+          "match": "\\\\UDG[A-U]"
+        },
+        {
           "name": "constant.character.escape.nextbasic",
           "match": "\\\\."
         }
