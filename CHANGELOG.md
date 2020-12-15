@@ -2,6 +2,10 @@
 
 All notable changes to the "nextbasic" extension will be documented in this file.
 
+## [1.6.2] - 2020-12-15
+
+- txt2bas@1.15.4 - fix export and validator around expressions in PRINT and other small validation tweaks
+
 ## [1.6.1] - 2020-11-01
 
 - Fix: quick simplify - use \A for UDG A (instead of \UDGA)
