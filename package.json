@@ -3,7 +3,7 @@
   "displayName": "NextBASIC",
   "description": "NextBASIC",
   "publisher": "remysharp",
-  "version": "1.6.2",
+  "version": "1.7.0",
   "prettier": {
     "singleQuote": true
   },
@@ -169,7 +169,8 @@
   },
   "scripts": {
     "lint": "eslint .",
-    "pretest": "npm run lint"
+    "pretest": "npm run lint",
+    "pub": "vsce publish"
   },
   "devDependencies": {
     "@types/glob": "^7.1.1",
@@ -187,7 +188,7 @@
   },
   "dependencies": {
     "lodash.debounce": "^4.0.8",
-    "txt2bas": "^1.15.4"
+    "txt2bas": "^1.15.5"
   },
   "repository": {
     "type": "git",

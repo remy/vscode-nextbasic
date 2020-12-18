@@ -2,6 +2,11 @@
 
 All notable changes to the "nextbasic" extension will be documented in this file.
 
+## [1.7.0] - 2020-12-18
+
+- Add: restore the original autoexec.bas allowing authors to use cspect with their own autoexec
+- txt2bas@1.15.5 - fix numeric exponent encoding (i.e. PRINT 1e6 works)
+
 ## [1.6.2] - 2020-12-15
 
 - txt2bas@1.15.4 - fix export and validator around expressions in PRINT and other small validation tweaks
