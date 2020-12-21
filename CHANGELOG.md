@@ -2,6 +2,10 @@
 
 All notable changes to the "nextbasic" extension will be documented in this file.
 
+## [1.7.1] - 2020-12-21
+
+- Docs: include video walkthrough of installation
+
 ## [1.7.0] - 2020-12-18
 
 - Add: restore the original autoexec.bas allowing authors to use cspect with their own autoexec
