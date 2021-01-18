@@ -2,6 +2,14 @@
 
 All notable changes to the "nextbasic" extension will be documented in this file.
 
+## [1.8.2] - 2021-01-18
+
+- txt2bas@1.16.1 - fix eager slurping of tokens when #define token is used
+
+## [1.8.1] - 2021-01-18
+
+- Fix: fix to support mixed case error codes (i.e. A or a works)
+
 ## [1.8.0] - 2021-01-18
 
 - Add: support for underscores in #define values
