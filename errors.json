@@ -1,0 +1,276 @@
+[
+  {
+    "code": "0",
+    "number": 0,
+    "report": "OK",
+    "description": "Successful completion, or jump to a line number bigger than any existing. This report does not change the line and statement jumped to by CONTINUE.",
+    "situation": "Any"
+  },
+  {
+    "code": "1",
+    "number": 1,
+    "report": "NEXT without FOR",
+    "description": "The control variable does not exist (it has not been set up by a FOR statement), but there is an ordinary variable with the same name.",
+    "situation": "NEXT"
+  },
+  {
+    "code": "2",
+    "number": 2,
+    "report": "Variable not found",
+    "description": "For a simple variable, this will happen if the variable is used before it has been assigned to in a LET, READ or INPUT statement or loaded from tape or set up in a FOR statement. For a subscripted variable, it will happen if the variable is used before it has been dimensioned in a DIM statement or loaded from a storage device.",
+    "situation": "Any"
+  },
+  {
+    "code": "3",
+    "number": 3,
+    "report": "Subscript wrong",
+    "description": "A subscript is beyond the dimension of the array, or there are the wrong number of subscripts. If the subscript is negative or bigger than 65535, then error B will result.",
+    "situation": "Subscripted variables, substrings"
+  },
+  {
+    "code": "4",
+    "number": 4,
+    "report": "Out of memory",
+    "description": "There is not enough room in the computer for what you are trying to do. If the computer really seems to be stuck in this state, you may have to clear out the command line using DELETE and then delete a program line or two (with the intention of putting them back afterwards) to give yourself room to manoeuvre with – say – CLEAR.",
+    "situation": "LET, INPUT, FOR, DIM, GO SUB, LOAD, MERGE, BANK, PALETTE, SPRITE, LAYER, TILE. Sometimes during expression evaluation"
+  },
+  {
+    "code": "5",
+    "number": 5,
+    "report": "Out of screen",
+    "description": "An INPUT statement has tried to generate more than 23 lines in the lower half of the screen. Also occurs with PRINT AT 22, …, TILE and SPRITE.",
+    "situation": "INPUT, PRINT AT, SPRITE, TILE"
+  },
+  {
+    "code": "6",
+    "number": 6,
+    "report": "Number too big",
+    "description": "Calculations have led to a number greater than about 10^38.",
+    "situation": "Any arithmetic"
+  },
+  {
+    "code": "7",
+    "number": 7,
+    "report": "RETURN without GO SUB",
+    "description": "There has been one more RETURN than there were GO SUBs.",
+    "situation": "RETURN"
+  },
+  {
+    "code": "8",
+    "number": 8,
+    "report": "End of file",
+    "description": "",
+    "situation": "Storage device, etc, operations"
+  },
+  {
+    "code": "9",
+    "number": 9,
+    "report": "STOP statement",
+    "description": "After this, CONTINUE will not repeat the STOP, but carries on with the statement after.",
+    "situation": "STOP"
+  },
+  {
+    "code": "A",
+    "number": 10,
+    "report": "Invalid argument",
+    "description": "The argument for a function is no good for some reason.",
+    "situation": "SQR, LN, ASN, ACS, USR (with string argument)"
+  },
+  {
+    "code": "B",
+    "number": 11,
+    "report": "Integer out of range",
+    "description": "When an integer is required, the floating point argument is rounded to the nearest integer. If this is outside a suitable range then error B results. For array access, see also error 3.",
+    "situation": "RUN, RANDOMIZE, POKE, DIM, GO TO, GO SUB, LIST, LLIST, PAUSE, PLOT, CHR$, PEEK, USR (with numeric argument), PALETTE, BANK, SPRITE, LAYER, TILE, POINT, Array access"
+  },
+  {
+    "code": "C",
+    "number": 12,
+    "report": "Nonsense in BASIC",
+    "description": "The text of the (string) argument does not form a valid expression.",
+    "situation": "VAL, VAL$"
+  },
+  {
+    "code": "D",
+    "number": 13,
+    "report": "BREAK - CONT repeats",
+    "description": "BREAK was pressed during some peripheral operation. The behaviour of CONTINUE after this report is normal in that it repeats the statement. Compare with report L.",
+    "situation": "LOAD, SAVE, VERIFY, MERGE, LPRINT, LLIST, COPY. Also when the computer asks scroll? and you type N, SPACE or STOP[1]",
+    "notes": "[1] STOP cannot normally be entered in NextBASIC as a token; this is retained for compatibility and does work when you switch to 48K mode"
+  },
+  {
+    "code": "E",
+    "number": 14,
+    "report": "Out of DATA",
+    "description": "You have tried to READ past the end of the DATA list.",
+    "situation": "READ"
+  },
+  {
+    "code": "F",
+    "number": 15,
+    "report": "Invalid file name",
+    "description": "SAVE with name that is empty or unacceptable (see Chapter 20)",
+    "situation": "SAVE"
+  },
+  {
+    "code": "G",
+    "number": 16,
+    "report": "No room for line",
+    "description": "There is not enough room left in memory to accommodate the new program line.",
+    "situation": "Entering a line into the program"
+  },
+  {
+    "code": "H",
+    "number": 17,
+    "report": "STOP in INPUT",
+    "description": "Some INPUT data started with STOP, or – for INPUT LINE – STOP was pressed. Unlike the case with error 9, after error H CONTINUE will behave normally, by repeating the INPUT statement.",
+    "situation": "INPUT"
+  },
+  {
+    "code": "I",
+    "number": 18,
+    "report": "FOR without NEXT",
+    "description": "There was a FOR loop to be executed no times (e.g. FOR n=1 TO 0) and the corresponding NEXT statement could not be found.",
+    "situation": "FOR"
+  },
+  {
+    "code": "J",
+    "number": 19,
+    "report": "Invalid I/O device",
+    "description": "",
+    "situation": "Storage device etc. operations"
+  },
+  {
+    "code": "K",
+    "number": 20,
+    "report": "Invalid colour",
+    "description": "The number specified is not an appropriate value.",
+    "situation": "INK, PAPER, BORDER, FLASH, BRIGHT, INVERSE, OVER, PALETTE; also after control characters"
+  },
+  {
+    "code": "L",
+    "number": 21,
+    "report": "BREAK into program",
+    "description": "BREAK pressed, this is detected between two statements. The line and statement number in the report refer to the statement before BREAK was pressed, but CONTINUE goes to the statement after (allowing for any jumps to be done), so it does not repeat any statements.",
+    "situation": "Any"
+  },
+  {
+    "code": "M",
+    "number": 22,
+    "report": "RAMTOP no good",
+    "description": "The number specified for RAMTOP is either too big or too small.",
+    "situation": "CLEAR, BANK; possibly in RUN"
+  },
+  {
+    "code": "N",
+    "number": 23,
+    "report": "Statement lost",
+    "description": "Jump to a statement that no longer exists.",
+    "situation": "RETURN, NEXT, CONTINUE"
+  },
+  {
+    "code": "O",
+    "number": 24,
+    "report": "Invalid stream",
+    "description": "",
+    "situation": "Storage device, etc, operations"
+  },
+  {
+    "code": "P",
+    "number": 25,
+    "report": "FN without DEF",
+    "description": "An attempt was made to call a function with FN that has not been defined with a matching DEF FN statement.",
+    "situation": "FN"
+  },
+  {
+    "code": "Q",
+    "number": 26,
+    "report": "Parameter error",
+    "description": "Wrong number of arguments, or one of them is the wrong type (string instead of number or vice versa).",
+    "situation": "FN"
+  },
+  {
+    "code": "R",
+    "number": 27,
+    "report": "Tape loading error",
+    "description": "A file on tape was found but for some reason could not be read in, or would not verify.",
+    "situation": "VERIFY, LOAD or MERGE"
+  },
+  {
+    "code": "d",
+    "number": 45,
+    "report": "Too many parentheses",
+    "description": "Too many parentheses around a repeated phrase in one of the arguments.",
+    "situation": "PLAY"
+  },
+  {
+    "code": "i",
+    "number": 50,
+    "report": "Invalid device",
+    "description": "",
+    "situation": "The storage device specified does not exist"
+  },
+  {
+    "code": "k",
+    "number": 52,
+    "report": "Invalid note",
+    "description": "PLAY came across a note or command it didn’t recognise, or a command which was in lower case.",
+    "situation": "PLAY"
+  },
+  {
+    "code": "l",
+    "number": 53,
+    "report": "Too big",
+    "description": "A parameter for a command is an order of magnitude too big.",
+    "situation": "PLAY"
+  },
+  {
+    "code": "m",
+    "number": 54,
+    "report": "Note out of range",
+    "description": "A series of sharps or flats has taken a note beyond the range of the sound chip.",
+    "situation": "PLAY"
+  },
+  {
+    "code": "n",
+    "number": 55,
+    "report": "Out of range",
+    "description": "A parameter for a command is too big or too small. If the error is very large, error L results.",
+    "situation": "PLAY"
+  },
+  {
+    "code": "o",
+    "number": 56,
+    "report": "Too many tied notes",
+    "description": "An attempt was made to tie too many notes together.",
+    "situation": "PLAY"
+  },
+  {
+    "code": "o",
+    "number": 56,
+    "report": "Invalid mode",
+    "description": "The mode specified does not exist",
+    "situation": "LAYER"
+  },
+  {
+    "code": "o",
+    "number": 56,
+    "report": "Direct command error",
+    "description": "An attempt was made to execute a command within a program that's meant to be executed directly from the command line or to RUN a procedure definition (DEFPROC)",
+    "situation": "DEFPROC, ERASE, LINE, LINE MERGE, BANK LINE MERGE"
+  },
+  {
+    "code": "o",
+    "number": 56,
+    "report": "Loop error",
+    "description": "Occurs in REPEAT...REPEAT UNTIL loops where a matching REPEAT UNTIL or REPEAT cannot be found.",
+    "situation": "REPEAT...REPEAT UNTIL, WHILE"
+  },
+  {
+    "code": "o",
+    "number": 56,
+    "report": "No DEFPROC",
+    "description": "A PROC was found without a matching DEFPROC...ENDPROC block",
+    "situation": "PROC"
+  }
+]

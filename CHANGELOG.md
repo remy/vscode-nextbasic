@@ -2,6 +2,11 @@
 
 All notable changes to the "nextbasic" extension will be documented in this file.
 
+## [1.8.0] - 2021-01-18
+
+- Add: support for underscores in #define values
+- Add: error code lookup command
+
 ## [1.7.2] - 2021-01-12
 
 - Fix: run cspect in project directory so logs, dumps, etc are project specific
