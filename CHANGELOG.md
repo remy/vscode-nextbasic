@@ -2,6 +2,18 @@
 
 All notable changes to the "nextbasic" extension will be documented in this file.
 
+## [1.8.5] - 2021-02-05
+
+- txt2bas@1.16.3 - fix defines combined with code that uses streams and channels
+
+## [1.8.4] - 2021-01-23
+
+- Fix: highlight defines with underscores properly
+
+## [1.8.3] - 2021-01-18
+
+- docs - remove iframe and simplify link to video
+
 ## [1.8.2] - 2021-01-18
 
 - txt2bas@1.16.1 - fix eager slurping of tokens when #define token is used

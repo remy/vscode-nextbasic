@@ -89,7 +89,7 @@
         },
         {
           "name": "support.constant.nextbasic",
-          "match": "(#[a-zA-Z]*)"
+          "match": "(#[a-zA-Z_]*)"
         },
         {
           "name": "constant.numeric.nextbasic",

@@ -6,9 +6,7 @@ ZX Spectrum NextBASIC syntax highlighting for Visual Studio Code.
 
 ## Video: how to setup your NextBASIC dev workflow
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Hg-Uu4QWK1E" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-This video installation walk through is shown on a Mac but is the same process for Windows and Linux: [Watch on YouTube](https://www.youtube.com/watch?v=Hg-Uu4QWK1E&feature=youtu.be)
+This video installation walk through is shown on a Mac but is the same process for Windows and Linux: **[Watch on YouTube](https://www.youtube.com/watch?v=Hg-Uu4QWK1E&feature=youtu.be)**
 
 ## Features
 
