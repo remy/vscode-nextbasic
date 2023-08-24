@@ -3,7 +3,7 @@
   "displayName": "NextBASIC",
   "description": "NextBASIC",
   "publisher": "remysharp",
-  "version": "1.9.0",
+  "version": "1.9.1",
   "prettier": {
     "singleQuote": true
   },
@@ -181,6 +181,7 @@
     "@types/mocha": "^7.0.2",
     "@types/node": "^13.13.5",
     "@types/vscode": "^1.44.0",
+    "@vscode/vsce": "^2.20.1",
     "eslint": "^6.8.0",
     "glob": "^7.1.6",
     "mocha": "^7.1.2",

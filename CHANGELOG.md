@@ -2,6 +2,10 @@
 
 All notable changes to the "nextbasic" extension will be documented in this file.
 
+## [1.9.0] - 2023-08-24
+
+- txt2bas@1.17.0 - updated to _start_ to support 2.08 NextBASIC
+
 ## [1.8.5] - 2021-02-05
 
 - txt2bas@1.16.3 - fix defines combined with code that uses streams and channels
