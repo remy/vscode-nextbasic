@@ -6,8 +6,8 @@
 
   "folding": {
     "markers": {
-      "start": "\\bDEFPROC\\b",
-      "end": "\\d\\s+ENDPROC\\b"
+      "start": "(\\s*(DEFPROC|IF|ELSE)\\b)",
+      "end": "(\\s*(ENDPROC|ENDIF|ELSE)\\b|$)"
     }
   },
 

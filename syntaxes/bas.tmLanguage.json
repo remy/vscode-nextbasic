@@ -25,7 +25,7 @@
         },
         {
           "name": "keyword.control.nextbasic",
-          "match": "(?i:\\b(AS|BEEP|BIN|BORDER|BRIGHT|CAT|CIRCLE|CLEAR|CLS|CONTINUE|COPY|DATA|DPOKE|DEF FN|DIM|DRAW|ERASE|FLASH|FORMAT|FOR|GO SUB|GO TO|IF|INK|INPUT|INVERSE|LET|LIST|LLIST|LOAD|LPRINT|MERGE|MOVE|NEW|NEXT|ON|OUT|OVER|PAPER|PAUSE|PLOT|POKE|PRINT|RANDOMIZE|READ|RESTORE|RETURN|RUN|SAVE|VERIFY|AT|LINE|STEP|TAB|THEN|TO|STOP|ELSE|ELSEIF|GOTO|GOSUB|WHILE|UNTIL|BANK|LAYER|PALETTE|SPRITE|TILE|REMOUNT|PWD|CD|MKDIR|RMDIR|DRIVER|PROC|DEFPROC|ENDPROC|LOCAL|OPEN|CLOSE|REPEAT|PLAY|SPECTRUM)\\b)"
+          "match": "(?i:\\b(AS|BEEP|BIN|BORDER|BRIGHT|CAT|CIRCLE|CLEAR|CLS|CONTINUE|COPY|DATA|DPOKE|DEF FN|DIM|DRAW|ERASE|FLASH|FORMAT|FOR|GO SUB|GO TO|IF|INK|INPUT|INVERSE|LET|LIST|LLIST|LOAD|LPRINT|MERGE|MOVE|NEW|NEXT|ON|OUT|OVER|PAPER|PAUSE|PLOT|POKE|PRINT|RANDOMIZE|READ|RESTORE|RETURN|RUN|SAVE|VERIFY|AT|LINE|STEP|TAB|THEN|TO|STOP|ELSE|ELSEIF|GOTO|GOSUB|WHILE|UNTIL|BANK|LAYER|PALETTE|SPRITE|TILE|REMOUNT|PWD|CD|MKDIR|RMDIR|DRIVER|PROC|DEFPROC|ENDPROC|LOCAL|OPEN|CLOSE|REPEAT|PLAY|SPECTRUM|PRIVATE|ENDIF|EXIT)\\b)"
         },
         {
           "name": "keyword.operator.logical.nextbasic",
@@ -33,11 +33,11 @@
         },
         {
           "name": "entity.name.function.nextbasic",
-          "match": "(?i:\\b(ABS|ACS|ASN|ATN|ATTR|CODE|COS|EXP|FN|INT|IN|LEN|LN|DPEEK|PEEK|PI|POINT|REG|RND|SGN|SIN|SQR|TAN|USR|VAL)\\b)"
+          "match": "(?i:\\b(ABS|ACS|ASN|ATN|ATTR|CODE|COS|EXP|FN|INT|IN|LEN|LN|DPEEK|PEEK|PI|POINT|REG|RND|SGN|SIN|SQR|TAN|USR|VAL|REF|TIME)\\b)"
         },
         {
           "name": "entity.name.function.nextbasic",
-          "match": "(?i:\\b(CHR\\$|INKEY\\$|SCREEN\\$|VAL\\$|STR\\$|PEEK\\$))"
+          "match": "(?i:\\b(CHR\\$|INKEY\\$|SCREEN\\$|VAL\\$|STR\\$|PEEK\\$|TIME\\$))"
         },
         {
           "name": "comment.line.remark.nextbasic",
@@ -77,7 +77,7 @@
         },
         {
           "name": "entity.other.nextbasic",
-          "match": "^(#\\s*(?:autostart|autoline|program)\\s+(?:.*))$"
+          "match": "^(#\\s*(?:autostart|autoline|program|bankfile)\\s+(?:.*))$"
         },
         {
           "name": "support.constant.nextbasic",

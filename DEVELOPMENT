@@ -1,0 +1,13 @@
+# Development
+
+This is a VS Code extension, so you'll need VS Code to develop from.
+
+## To run the extension
+
+From VS Code, open "Run and Debug" and hit the play button.
+
+Insert some NextBASIC code and make sure the language is selected is NextBASIC.
+
+## Token debugging
+
+From the running extension instance, use "Developer: Inspect Editor Tokens and Scope"

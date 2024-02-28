@@ -10,6 +10,7 @@ This video installation walk through is shown on a Mac but is the same process f
 
 ## Features
 
+- Supports 2.08+ NextBASIC syntax
 - Import and export binary NextBASIC files
 - Full NextBASIC syntax, including new `;` comment support
 - Jump to definition for `GO TO` and `PROC` statements

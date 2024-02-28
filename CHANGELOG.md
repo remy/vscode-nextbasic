@@ -2,6 +2,10 @@
 
 All notable changes to the "nextbasic" extension will be documented in this file.
 
+## [1.10.0] - 2024-02-28
+
+- txt2bas@1.18.0 - updated to support 2.08 IF and ELSE IF statements and addtional new syntax, including TIME$, TIME, EXIT, PRIVATE and REF
+
 ## [1.9.0] - 2023-08-24
 
 - txt2bas@1.17.0 - updated to _start_ to support 2.08 NextBASIC
