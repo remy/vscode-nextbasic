@@ -2,6 +2,10 @@
 
 All notable changes to the "nextbasic" extension will be documented in this file.
 
+## [1.11.1] - 2024-03-04
+
+- txt2bas@1.19.2 - fixed bank splitting error: "EROFS: read-only file system"
+
 ## [1.11.0] - 2024-03-04
 
 - Support for #bank and #bankfile landed, this will split create bank files and sync these across to cspect during development, but also during export

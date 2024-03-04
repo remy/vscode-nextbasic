@@ -3,3 +3,4 @@ node_modules
 *.vsix
 cspect.log
 cspect_win.dat
+fixtures/
