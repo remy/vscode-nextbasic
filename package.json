@@ -3,7 +3,7 @@
   "displayName": "NextBASIC",
   "description": "NextBASIC",
   "publisher": "remysharp",
-  "version": "1.10.0",
+  "version": "1.11.0",
   "prettier": {
     "singleQuote": true
   },
@@ -46,6 +46,11 @@
           "type": "string",
           "default": "hdfmonkey",
           "description": "Points the full path to the hdfmonkey executable, defaults to searching your $PATH"
+        },
+        "nextbasic.monoPath": {
+          "type": "string",
+          "default": "mono",
+          "description": "Points the full path of `mono`, otherwise tries to use your $PATH"
         },
         "nextbasic.commentWith": {
           "type": "string",
@@ -193,7 +198,7 @@
   },
   "dependencies": {
     "lodash.debounce": "^4.0.8",
-    "txt2bas": "^1.18.0"
+    "txt2bas": "^1.19.1"
   },
   "repository": {
     "type": "git",

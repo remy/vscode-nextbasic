@@ -24,6 +24,7 @@ This video installation walk through is shown on a Mac but is the same process f
 - Help on hover
 - Export to .bas as +3DOS format or .tap
 - Support directives: `#autostart n`, `#autoline n,m`, `#program str` and custom `#define key=value` (and replaces `#key` instances in BASIC)
+- Support for `#bank` and `#bankfile` to auto split your code in both "run with cspect" and "export"
 
 ## Cspect support
 

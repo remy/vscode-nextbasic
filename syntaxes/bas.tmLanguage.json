@@ -77,7 +77,7 @@
         },
         {
           "name": "entity.other.nextbasic",
-          "match": "^(#\\s*(?:autostart|autoline|program|bankfile)\\s+(?:.*))$"
+          "match": "^(#\\s*(?:autostart|autoline|program|bankfile|bank)\\s+(?:.*))$"
         },
         {
           "name": "support.constant.nextbasic",

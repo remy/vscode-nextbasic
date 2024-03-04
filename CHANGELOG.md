@@ -2,9 +2,16 @@
 
 All notable changes to the "nextbasic" extension will be documented in this file.
 
+## [1.11.0] - 2024-03-04
+
+- Support for #bank and #bankfile landed, this will split create bank files and sync these across to cspect during development, but also during export
+- Note that with bank splitting, during "run with cspect" the banks are saved in a tmp directory and don't overwrite local files. Only during "export" are the banks stored in the working directory
+- txt2bas@1.19.0 - restored support for inline IF/THEN statements + split bank
+- Add config option for mono, defaults to reading from the path
+
 ## [1.10.0] - 2024-02-28
 
-- txt2bas@1.18.0 - updated to support 2.08 IF and ELSE IF statements and addtional new syntax, including TIME$, TIME, EXIT, PRIVATE and REF
+- txt2bas@1.18.0 - updated to support 2.08 IF and ELSE IF statements and additional new syntax, including TIME$, TIME, EXIT, PRIVATE and REF
 
 ## [1.9.0] - 2023-08-24
 
