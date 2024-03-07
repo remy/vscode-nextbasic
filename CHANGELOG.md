@@ -2,6 +2,13 @@
 
 All notable changes to the "nextbasic" extension will be documented in this file.
 
+## [1.11.2] - 2024-03-07
+
+- keyword now resets int function [#48](https://github.com/remy/vscode-nextbasic/issues/48)
+- reset int function on `;` in `PRINT` statement [#49](https://github.com/remy/vscode-nextbasic/issues/49)
+- fixed main program not being synced properly when using split banks [#47](https://github.com/remy/vscode-nextbasic/issues/47) - all three, thanks @NealeTools for the issues
+- bump to txt2bas@1.19.3
+
 ## [1.11.1] - 2024-03-04
 
 - txt2bas@1.19.2 - fixed bank splitting error: "EROFS: read-only file system"
