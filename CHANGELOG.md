@@ -2,6 +2,11 @@
 
 All notable changes to the "nextbasic" extension will be documented in this file.
 
+## [1.11.3] - 2024-03-08
+
+- Add ctrl+shift+e / cmd+shift+e for export keyboard shortcut
+- Fix splitbank sync (finally) fixed [#47](https://github.com/remy/vscode-nextbasic/issues/47)
+
 ## [1.11.2] - 2024-03-07
 
 - keyword now resets int function [#48](https://github.com/remy/vscode-nextbasic/issues/48)

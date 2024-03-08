@@ -3,7 +3,7 @@
   "displayName": "NextBASIC",
   "description": "NextBASIC",
   "publisher": "remysharp",
-  "version": "1.11.2",
+  "version": "1.11.3",
   "prettier": {
     "singleQuote": true
   },
@@ -50,7 +50,7 @@
         "nextbasic.monoPath": {
           "type": "string",
           "default": "mono",
-          "description": "Points the full path of `mono`, otherwise tries to use your $PATH"
+          "description": "Only used on non-Windows systems: points the full path of `mono`, otherwise tries to use your $PATH."
         },
         "nextbasic.commentWith": {
           "type": "string",
@@ -121,6 +121,12 @@
         "command": "nextbasic.commentLine",
         "key": "ctrl+/",
         "when": "!isMac && editorLangId == nextbasic"
+      },
+      {
+        "key": "shift+ctrl+e",
+        "mac": "shift+cmd+e",
+        "command": "nextbasic.export",
+        "when": "editorTextFocus && editorLangId == 'nextbasic'"
       },
       {
         "key": "shift+ctrl+r",
