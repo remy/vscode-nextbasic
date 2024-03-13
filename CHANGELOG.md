@@ -2,6 +2,13 @@
 
 All notable changes to the "nextbasic" extension will be documented in this file.
 
+## [1.11.4] - 2024-03-13
+
+- Support string modifiers: `a$[<+->]`
+- Support floating hex and binary values: `a = $DEAD.EFF` or `b = @11.11`
+- Fix auto numbering when explicit `#autoline` is toggled
+- Bug fixes in txt2bas, including validation fixes
+
 ## [1.11.3] - 2024-03-08
 
 - Add ctrl+shift+e / cmd+shift+e for export keyboard shortcut
