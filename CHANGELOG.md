@@ -2,6 +2,12 @@
 
 All notable changes to the "nextbasic" extension will be documented in this file.
 
+## [1.11.5] - 2024-03-18
+
+- Include strip comments option in "Run with cspect" if enabled
+- Strip comments no longer triggers re-number (tx2bas fix)
+- Show messaging when comments are stripped (it's the only mutation)
+
 ## [1.11.4] - 2024-03-13
 
 - Support string modifiers: `a$[<+->]`
