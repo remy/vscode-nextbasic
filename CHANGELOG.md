@@ -2,6 +2,10 @@
 
 All notable changes to the "nextbasic" extension will be documented in this file.
 
+## [1.11.6] - 2024-03-28
+
+- Fix integer expression with additive arithmetic [#54](https://github.com/remy/vscode-nextbasic/issues/54)
+
 ## [1.11.5] - 2024-03-18
 
 - Include strip comments option in "Run with cspect" if enabled
