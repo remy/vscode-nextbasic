@@ -2,6 +2,11 @@
 
 All notable changes to the "nextbasic" extension will be documented in this file.
 
+## [1.11.7] - 2024-04-18
+
+- Fix integer expression inside `SGN {...}` [#56](https://github.com/remy/vscode-nextbasic/issues/56)
+- Fix encoding of `@labels` [#55](https://github.com/remy/vscode-nextbasic/issues/55)
+
 ## [1.11.6] - 2024-03-28
 
 - Fix integer expression with additive arithmetic [#54](https://github.com/remy/vscode-nextbasic/issues/54)
