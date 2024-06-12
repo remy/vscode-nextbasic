@@ -2,6 +2,21 @@
 
 All notable changes to the "nextbasic" extension will be documented in this file.
 
+## [1.11.10] - 2024-06-12
+
+- More fixes around integer parsing logic
+
+## [1.11.9] - 2024-06-12
+
+- Fix cspect hanging in certain conditions [#58](https://github.com/remy/vscode-nextbasic/issues/58)
+
+## [1.11.8] - 2024-06-12
+
+Significant logic update in integer expression handling. Currently passes all tests - including issues found in the wild, but if you see something wrong in exported code, please report it on the github [issue page](https://github.com/remy/vscode-nextbasic/issues/new)
+
+- Restructure of int handling [#57](https://github.com/remy/vscode-nextbasic/issues/57), [#60](https://github.com/remy/vscode-nextbasic/issues/60) and [#61](https://github.com/remy/vscode-nextbasic/issues/61)
+- CODE can be used as an int function [#46](https://github.com/remy/vscode-nextbasic/issues/56)
+
 ## [1.11.7] - 2024-04-18
 
 - Fix integer expression inside `SGN {...}` [#56](https://github.com/remy/vscode-nextbasic/issues/56)

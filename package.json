@@ -3,12 +3,12 @@
   "displayName": "NextBASIC",
   "description": "NextBASIC",
   "publisher": "remysharp",
-  "version": "1.11.7",
+  "version": "1.11.10",
   "prettier": {
     "singleQuote": true
   },
   "engines": {
-    "vscode": "^1.44.0"
+    "vscode": "^1.63.0"
   },
   "categories": [
     "Programming Languages",
@@ -202,7 +202,7 @@
     "@types/mocha": "^7.0.2",
     "@types/node": "^13.13.5",
     "@types/vscode": "^1.44.0",
-    "@vscode/vsce": "^2.20.1",
+    "@vscode/vsce": "^2.27.0",
     "eslint": "^6.8.0",
     "glob": "^7.1.6",
     "mocha": "^7.1.2",
@@ -215,7 +215,7 @@
   "dependencies": {
     "@remy/unpack": "^2.1.7",
     "lodash.debounce": "^4.0.8",
-    "txt2bas": "^1.21.4"
+    "txt2bas": "^1.22.1"
   },
   "repository": {
     "type": "git",
