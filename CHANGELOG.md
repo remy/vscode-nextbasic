@@ -2,6 +2,10 @@
 
 All notable changes to the "nextbasic" extension will be documented in this file.
 
+## [1.11.12] - 2024-07-09
+
+- Fixed bank imports clipping lines [#65](https://github.com/remy/vscode-nextbasic/issues/65)
+
 ## [1.11.11] - 2024-06-28
 
 - Disable validation during export, so it only happens inline [#59](https://github.com/remy/vscode-nextbasic/issues/59)

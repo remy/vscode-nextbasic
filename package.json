@@ -215,7 +215,7 @@
   "dependencies": {
     "@remy/unpack": "^2.1.7",
     "lodash.debounce": "^4.0.8",
-    "txt2bas": "^1.22.1"
+    "txt2bas": "^1.22.2"
   },
   "repository": {
     "type": "git",
