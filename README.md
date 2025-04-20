@@ -31,7 +31,7 @@ This video installation walk through is shown on a Mac but is the same process f
 Prerequisites:
 
 - Install [Cspect](https://dailly.blogspot.com/) (see right hand sidebar)
-- Install [hdfmonkey](https://github.com/gasman/hdfmonkey) (ideally stored in `$PATH`) ([Windows version here](http://uto.speccy.org/downloads/hdfmonkey_windows.zip))
+- Install [hdfmonkey](https://github.com/gasman/hdfmonkey) (ideally stored in `$PATH`) ([Windows version here](http://uto.speccy.org/downloads/hdfmonkey_windows.zip)) - version 0.4 ([0.3 apparently gives errors](https://github.com/remy/vscode-nextbasic/issues/66))
 - (MacOS only) Install [mono](https://formulae.brew.sh/formula/mono) via `brew install mono`
 
 **Important Windows users** ensure you use the hdfmonkey build from uto.speccy.org (link above) - it's built _without_ cygwin as a dependency.
