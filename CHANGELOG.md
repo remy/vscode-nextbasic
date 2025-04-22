@@ -2,6 +2,12 @@
 
 All notable changes to the "nextbasic" extension will be documented in this file.
 
+## [1.11.13] - 2025-04-22
+
+- Fix `#chan` channel names from being exported [#42](https://github.com/remy/vscode-nextbasic/issues/42)
+- Fix `PRIVATE CLEAR` was embedding varspace when it shouldn't [#67](https://github.com/remy/vscode-nextbasic/issues/67)
+- Fixed (incorrect) validation on nested integer expressions [#68](https://github.com/remy/vscode-nextbasic/issues/68)
+
 ## [1.11.12] - 2024-07-09
 
 - Fixed bank imports clipping lines [#65](https://github.com/remy/vscode-nextbasic/issues/65)
